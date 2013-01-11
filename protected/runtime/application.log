@@ -1,0 +1,1586 @@
+2012/12/01 13:19:00 [error] [php] include(ApplicationModel.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/jonah/framework/YiiBase.php:423)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php(3): spl_autoload_call()
+#1 /Library/WebServer/Documents/jonah/framework/YiiBase.php(423): include()
+#2 unknown(0): autoload()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(33): spl_autoload_call()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php (3)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (33)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/01 13:19:28 [error] [php] PDO::__construct(): [2002] No such file or directory (trying to connect via unix:///var/mysql/mysql.sock) (/Library/WebServer/Documents/jonah/framework/db/CDbConnection.php:422)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(309): CDbConnection->setActive()
+#2 /Library/WebServer/Documents/jonah/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(431): CWebApplication->getComponent()
+#4 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(624): CWebApplication->getDb()
+#5 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(2311): ContentBlock->getDbConnection()
+#6 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct()
+#7 /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php(6): model()
+#8 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(33): model()
+#9 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#15 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php (6)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (33)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/01 13:21:01 [error] [php] PDO::__construct(): [2002] No such file or directory (trying to connect via unix:///var/mysql/mysql.sock) (/Library/WebServer/Documents/jonah/framework/db/CDbConnection.php:422)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(309): CDbConnection->setActive()
+#2 /Library/WebServer/Documents/jonah/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(431): CWebApplication->getComponent()
+#4 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(624): CWebApplication->getDb()
+#5 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(2311): ContentBlock->getDbConnection()
+#6 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct()
+#7 /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php(6): model()
+#8 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(33): model()
+#9 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#15 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php (6)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (33)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/01 13:25:08 [error] [php] PDO::__construct(): [2002] No such file or directory (trying to connect via unix:///var/mysql/mysql.sock) (/Library/WebServer/Documents/jonah/framework/db/CDbConnection.php:422)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Library/WebServer/Documents/jonah/framework/db/CDbConnection.php(309): CDbConnection->setActive()
+#2 /Library/WebServer/Documents/jonah/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(431): CWebApplication->getComponent()
+#4 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(624): CWebApplication->getDb()
+#5 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(2311): ContentBlock->getDbConnection()
+#6 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct()
+#7 /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php(6): model()
+#8 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(32): model()
+#9 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#15 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/ContentBlock.php (6)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (32)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/01 13:26:36 [error] [php] Object of class ContentBlock could not be converted to string (/Library/WebServer/Documents/jonah/protected/controllers/SiteController.php:34)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#1 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#2 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#3 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#4 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/03 21:38:48 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/Library/WebServer/Documents/jonah/protected/views//layouts/main.php". A CActiveForm widget does not have an endWidget() call.' in /Library/WebServer/Documents/jonah/framework/web/CBaseController.php:102
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#1 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#2 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#5 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#7 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CController->render('index')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:39:19 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/Library/WebServer/Documents/jonah/protected/views//layouts/main.php". A CActiveForm widget does not have an endWidget() call.' in /Library/WebServer/Documents/jonah/framework/web/CBaseController.php:102
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#1 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#2 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#5 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#7 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CController->render('index')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:47:59 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/Library/WebServer/Documents/jonah/protected/views//layouts/main.php". A CActiveForm widget does not have an endWidget() call.' in /Library/WebServer/Documents/jonah/framework/web/CBaseController.php:102
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#1 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#2 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#5 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#7 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CController->render('index')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:52:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/03 21:52:00 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:52:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/03 21:52:21 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:52:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/03 21:52:22 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/03 21:52:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/03 21:52:23 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 20:58:29 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(71): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#14 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(35): CController->render('index')
+#16 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#17 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#22 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:12:52 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(71): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#14 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(35): CController->render('index')
+#16 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#17 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#22 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:12:53 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(71): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#14 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(35): CController->render('index')
+#16 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#17 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#22 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:13:53 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(70): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#14 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(35): CController->render('index')
+#16 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#17 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#22 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:13:54 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootActiveForm" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(SiteController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(190): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(70): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#11 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#12 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#14 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(35): CController->render('index')
+#16 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#17 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#22 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#23 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:26:01 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:28:49 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:30:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/04 21:30:40 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:30:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/04 21:30:42 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:30:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/04 21:30:43 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:30:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/04 21:30:43 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/04 21:30:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/04 21:30:43 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/08 11:24:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'jonah.item' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `Item`.
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (34)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/08 11:24:13 [error] [exception.CDbException] exception 'CDbException' with message 'The table "Item" for active record class "Item" cannot be found in the database.' in /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php:2312
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(403): CActiveRecord::model('Item')
+#2 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(34): CActiveRecord->__construct()
+#4 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#9 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#10 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/08 11:26:38 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/08 11:27:17 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/08 11:27:54 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/08 11:28:46 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/layouts/main.php(77): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#9 /Library/WebServer/Documents/jonah/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#10 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(207): COutputProcessor->run()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#12 /Library/WebServer/Documents/jonah/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(785): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(37): CController->render('index', Array)
+#17 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#18 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#22 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#23 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/jonah/
+HTTP_REFERER=http://192.168.0.100/
+---
+2012/12/11 21:15:09 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:15:09 [error] [php] move_uploaded_file(): Filename cannot be empty (/Library/WebServer/Documents/jonah/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(42): Item->save()
+#1 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#6 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/Item.php (38)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (42)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:27:53 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:27:53 [error] [php] move_uploaded_file(): Filename cannot be empty (/Library/WebServer/Documents/jonah/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(43): Item->save()
+#1 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#6 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/models/Item.php (38)
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (43)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:31:10 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:31:10 [error] [php] move_uploaded_file(../../upload): failed to open stream: Permission denied (/Library/WebServer/Documents/jonah/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#1 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#4 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (45)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:32:24 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:32:24 [error] [php] move_uploaded_file(): The second argument to copy() function cannot be a directory (/Library/WebServer/Documents/jonah/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#1 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#4 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (45)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:33:01 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:33:01 [error] [php] move_uploaded_file(): The second argument to copy() function cannot be a directory (/Library/WebServer/Documents/jonah/framework/web/CUploadedFile.php:197)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#1 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#4 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (44)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:36:40 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 21:37:29 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 22:06:00 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/11 22:06:55 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 19:58:53 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 19:58:53 [error] [php] include(Image.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/jonah/framework/YiiBase.php:423)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(49): spl_autoload_call()
+#1 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#6 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (49)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 20:00:27 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 20:01:19 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 20:02:10 [warning] [application] Failed to set unsafe attribute "image" of "Item".
+in /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php (39)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2012/12/17 20:48:48 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(14): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', NULL, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', NULL, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', NULL, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(10): CController->render('home')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/admin/home
+---
+2012/12/17 20:54:56 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(14): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', NULL, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', NULL, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', NULL, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(10): CController->render('home')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/admin/home
+---
+2012/12/17 21:07:13 [error] [exception.CException] exception 'CException' with message 'TbInput: Failed to initialize widget! Model is not set.' in /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/input/TbInput.php:96
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(148): TbInput->init()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(497): CBaseController->widget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/extensions/bootstrap/widgets/TbActiveForm.php(124): TbActiveForm->inputRow('filefield', NULL, 'image', NULL, Array)
+#4 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(14): TbActiveForm->fileFieldRow(NULL, 'image', Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#6 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', NULL, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', NULL, true)
+#8 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', NULL, true)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(10): CController->render('home')
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/admin/home
+---
+2012/12/20 20:42:54 [error] [exception.CException] exception 'CException' with message 'CMultiFileUpload must specify "model" and "attribute" or "name" property values.' in /Library/WebServer/Documents/jonah/framework/web/widgets/CInputWidget.php:61
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/widgets/CMultiFileUpload.php(88): CInputWidget->resolveNameID()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(174): CMultiFileUpload->run()
+#2 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(31): CBaseController->widget('CMultiFileUploa...', Array)
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', Array, true)
+#7 /Library/WebServer/Documents/jonah/protected/components/Controller.php(21): CController->render('home', Array)
+#8 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(35): Controller->render('home', Array)
+#9 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#15 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jonah/admin/home
+---
+2012/12/20 22:43:42 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "fileFieldRow".' in /Library/WebServer/Documents/jonah/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(12): CComponent->__call('fileFieldRow', Array)
+#1 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(12): CActiveForm->fileFieldRow(Object(Item), 'image', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', Array, true)
+#6 /Library/WebServer/Documents/jonah/protected/components/Controller.php(21): CController->render('home', Array)
+#7 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(33): Controller->render('home', Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#9 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#14 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jonah/admin/home
+---
+2012/12/20 22:44:27 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "fileFieldRow".' in /Library/WebServer/Documents/jonah/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(12): CComponent->__call('fileFieldRow', Array)
+#1 /Library/WebServer/Documents/jonah/protected/views/admin/home.php(12): CActiveForm->fileFieldRow(Object(Item), 'image', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('home', Array, true)
+#6 /Library/WebServer/Documents/jonah/protected/components/Controller.php(21): CController->render('home', Array)
+#7 /Library/WebServer/Documents/jonah/protected/controllers/AdminController.php(33): Controller->render('home', Array)
+#8 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): AdminController->actionHome()
+#9 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('home')
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('admin/home')
+#14 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/jonah/admin/home
+HTTP_REFERER=http://192.168.0.100/jonah/admin/home
+---
+2013/01/02 22:05:59 [error] [php] mkdir(): Permission denied (/Library/WebServer/Documents/jonah/protected/extensions/xupload/actions/XUploadAction.php:161)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/extensions/xupload/actions/XUploadAction.php(191): XUploadAction->handleUploading()
+#1 /Library/WebServer/Documents/jonah/framework/web/actions/CAction.php(75): XUploadAction->run()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): XUploadAction->runWithParams()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): SiteController->runAction()
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#5 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): SiteController->run()
+#6 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/index.php/site/upload?parent_id=1
+in /Library/WebServer/Documents/jonah/protected/extensions/xupload/actions/XUploadAction.php (161)
+in /Library/WebServer/Documents/jonah/protected/extensions/xupload/actions/XUploadAction.php (237)
+in /Library/WebServer/Documents/jonah/protected/extensions/xupload/actions/XUploadAction.php (191)
+2013/01/02 22:07:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/01022013/550_thumb.jpg".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('upload/01022013...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/upload/01022013/550_thumb.jpg
+HTTP_REFERER=http://192.168.0.100/jonah/
+---
+2013/01/06 17:05:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:13:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:20:06 [error] [exception.CException] exception 'CException' with message 'XUpload must specify "model" and "attribute" or "name" property values.' in /Library/WebServer/Documents/jonah/framework/zii/widgets/jui/CJuiInputWidget.php:54
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/protected/extensions/xupload/XUpload.php(90): CJuiInputWidget->resolveNameID()
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(174): XUpload->run()
+#2 /Library/WebServer/Documents/jonah/protected/views/site/index.php(16): CBaseController->widget('xupload.XUpload', Array)
+#3 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#7 /Library/WebServer/Documents/jonah/protected/components/Controller.php(21): CController->render('index', Array)
+#8 /Library/WebServer/Documents/jonah/protected/controllers/SiteController.php(30): Controller->render('index')
+#9 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#10 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('')
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#15 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/jonah/
+---
+2013/01/06 17:20:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/
+---
+2013/01/06 17:31:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/
+---
+2013/01/06 17:37:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:41:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:41:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:45:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 17:45:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "news/view".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/news/view
+---
+2013/01/06 21:58:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/06 22:14:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/06 22:45:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:30:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:38:20 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.BootButton" is invalid. Make sure it points to an existing PHP file and the file is readable.' in /Library/WebServer/Documents/jonah/framework/YiiBase.php:318
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWidgetFactory.php(147): YiiBase::import('bootstrap.widge...', true)
+#1 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(147): CWidgetFactory->createWidget(Object(NewsController), 'bootstrap.widge...', Array)
+#2 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(173): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 /Library/WebServer/Documents/jonah/protected/views/news/admin.php(23): CBaseController->widget('bootstrap.widge...', Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#5 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#7 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#8 /Library/WebServer/Documents/jonah/protected/components/Controller.php(23): CController->render('admin', Array)
+#9 /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php(37): Controller->render('admin', Array)
+#10 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): NewsController->actionAdmin()
+#11 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('admin')
+#15 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/admin')
+#16 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/jonah/news/admin
+---
+2013/01/07 20:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:40:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 20:40:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 21:20:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/07 21:20:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:21:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:24:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:24:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:25:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/form.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/form.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/screen.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/screen.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/screen.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 21:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/form.css".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/form.css')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/form.css
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_55_fbf9ee_1x400.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_glass_55_fbf9ee_1x400.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_222222_256x240.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-i...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-icons_222222_256x240.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_e6e6e6_1x400.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_glass_75_dadada_1x400.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-i...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-icons_454545_256x240.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/07 22:41:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('css/images/ui-b...')
+#1 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/jonah/css/images/ui-bg_flat_75_ffffff_40x100.png
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/08 19:32:17 [error] [exception.CException] exception 'CException' with message 'News and its behaviors do not have a method or closure named "findCategoriesForSelect".' in /Library/WebServer/Documents/jonah/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(226): CComponent->__call('findCategoriesF...', Array)
+#1 /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php(11): CActiveRecord->__call('findCategoriesF...', Array)
+#2 /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php(11): News->findCategoriesForSelect()
+#3 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): NewsController->actionView()
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('view')
+#8 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/view')
+#9 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/jonah/index.php/news/view
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/08 21:37:16 [error] [exception.CException] exception 'CException' with message 'Property "News.substr(content, 0, 10 )" is not defined.' in /Library/WebServer/Documents/jonah/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(144): CComponent->__get('substr(content,...')
+#1 /Library/WebServer/Documents/jonah/framework/web/helpers/CHtml.php(1809): CActiveRecord->__get('substr(content,...')
+#2 /Library/WebServer/Documents/jonah/framework/zii/widgets/grid/CDataColumn.php(134): CHtml::value(Object(News), 'substr(content,...')
+#3 /Library/WebServer/Documents/jonah/framework/zii/widgets/grid/CGridColumn.php(145): CDataColumn->renderDataCellContent(0, Object(News))
+#4 /Library/WebServer/Documents/jonah/framework/zii/widgets/grid/CGridView.php(546): CGridColumn->renderDataCell(0)
+#5 /Library/WebServer/Documents/jonah/framework/zii/widgets/grid/CGridView.php(517): CGridView->renderTableRow(0)
+#6 /Library/WebServer/Documents/jonah/framework/zii/widgets/grid/CGridView.php(427): CGridView->renderTableBody()
+#7 /Library/WebServer/Documents/jonah/framework/zii/widgets/CBaseListView.php(161): CGridView->renderItems()
+#8 [internal function]: CBaseListView->renderSection(Array)
+#9 /Library/WebServer/Documents/jonah/framework/zii/widgets/CBaseListView.php(144): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#10 /Library/WebServer/Documents/jonah/framework/zii/widgets/CBaseListView.php(129): CBaseListView->renderContent()
+#11 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(174): CBaseListView->run()
+#12 /Library/WebServer/Documents/jonah/protected/views/news/admin.php(28): CBaseController->widget('bootstrap.widge...', Array)
+#13 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(127): require('/Library/WebSer...')
+#14 /Library/WebServer/Documents/jonah/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Library/WebSer...', Array, true)
+#15 /Library/WebServer/Documents/jonah/framework/web/CController.php(870): CBaseController->renderFile('/Library/WebSer...', Array, true)
+#16 /Library/WebServer/Documents/jonah/framework/web/CController.php(783): CController->renderPartial('admin', Array, true)
+#17 /Library/WebServer/Documents/jonah/protected/components/Controller.php(23): CController->render('admin', Array)
+#18 /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php(57): Controller->render('admin', Array)
+#19 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): NewsController->actionAdmin()
+#20 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#21 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#22 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('admin')
+#24 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/admin')
+#25 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#26 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/jonah/index.php/news/admin
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/08 22:08:04 [error] [exception.CException] exception 'CException' with message 'Property "News.model" is not defined.' in /Library/WebServer/Documents/jonah/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/db/ar/CActiveRecord.php(144): CComponent->__get('model')
+#1 /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php(31): CActiveRecord->__get('model')
+#2 /Library/WebServer/Documents/jonah/framework/web/actions/CInlineAction.php(50): NewsController->actionAdd()
+#3 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('add')
+#7 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/add')
+#8 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/jonah/index.php/news/add
+HTTP_REFERER=http://localhost/jonah/index.php/news/add
+---
+2013/01/08 22:48:04 [error] [php] date() expects at least 1 parameter, 0 given (/Library/WebServer/Documents/jonah/protected/controllers/NewsController.php:23)
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Library/WebServer/Documents/jonah/framework/web/CController.php(287): NewsController->runAction()
+#2 /Library/WebServer/Documents/jonah/framework/web/CController.php(266): NewsController->runActionWithFilters()
+#3 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): NewsController->run()
+#4 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#5 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Library/WebServer/Documents/jonah/index.php(13): CWebApplication->run()
+REQUEST_URI=/jonah/index.php/news/add
+in /Library/WebServer/Documents/jonah/protected/controllers/NewsController.php (23)
+in /Library/WebServer/Documents/jonah/index.php (13)
+2013/01/09 19:26:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in /Library/WebServer/Documents/jonah/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CController.php(271): CController->missingAction('update')
+#1 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('update')
+#2 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/update')
+#3 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jonah/index.php/news/update/9
+HTTP_REFERER=http://localhost/jonah/news/admin
+---
+2013/01/09 19:26:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update".' in /Library/WebServer/Documents/jonah/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/jonah/framework/web/CController.php(271): CController->missingAction('update')
+#1 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(283): CController->run('update')
+#2 /Library/WebServer/Documents/jonah/framework/web/CWebApplication.php(142): CWebApplication->runController('news/update')
+#3 /Library/WebServer/Documents/jonah/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Library/WebServer/Documents/jonah/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/jonah/index.php/news/update/9
+HTTP_REFERER=http://localhost/jonah/news/admin
+---

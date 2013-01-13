@@ -7,11 +7,7 @@
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui.js"></script>
-	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-timepicker-addon.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui-timepicker-addon.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 
 </head>
@@ -26,17 +22,10 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
-                array('label'=>'Home', 'url'=>'#', 'active'=>true),
-                array('label'=>'Link', 'url'=>'#'),
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else here', 'url'=>'#'),
-                    '---',
-                    array('label'=>'NAV HEADER'),
-                    array('label'=>'Separated link', 'url'=>'#'),
-                    array('label'=>'One more separated link', 'url'=>'#'),
-                )),
+                array('label'=>'Home', 'url' => Yii::app()->createUrl('admin/home'), 'active' => ($this->id == 'admin' ? true : false)),
+                array('label'=>'Content', 'url'=> Yii::app()->createUrl('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
+                array('label'=>'News', 'url' => Yii::app()->createUrl('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
+                array('label'=>'Projects', 'url'=>'#'),
             ),
         ),
         array(

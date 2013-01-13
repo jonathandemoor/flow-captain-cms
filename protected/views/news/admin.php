@@ -16,13 +16,13 @@
     'enableSorting' => false,
     'dataProvider' => $dataProvider,
     'columns'=>array(
-        array('name'=>'id', 'header'=>'#'),
         array('name'=>'title', 'header'=>'Title'),
         array('name'=>'content_short', 'header'=>'Content'),
         array('name'=>'date', 'header'=>'Date'),
         array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
-            'htmlOptions'=>array('style'=>'width: 50px'),
+            'template'=>' {update} {delete}',
+            'htmlOptions'=>array('style'=>'width: 50px; text-align: center;'),
         ),
     ),
 )); ?>

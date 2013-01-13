@@ -77,10 +77,10 @@ class NewsController extends Controller {
 	    if(!isset($_GET['id'])) {
 		    $this->render('admin');
 	    }
+	    
     	$model = News::model()->findByID($_GET['id']);
-    	$model->delete();
-    	    			
-		
+    	
+    	$model->delete();	
     } 
     
     public function actionAdmin() {
@@ -89,7 +89,7 @@ class NewsController extends Controller {
 		$dataProvider = new CActiveDataProvider(
 			'News', array(
 				'criteria' => array(
-					'order'     => 'date ASC',
+					'order'     => 'date DESC',
 					
 			    ),
 			    'pagination' => array(

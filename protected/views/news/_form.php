@@ -1,7 +1,9 @@
+<?php $this->renderPartial('../_partials/jquery_ui') ?>
+	
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'horizontalForm',
-    'type'=>'horizontal',
+    'id'		=>'horizontalForm',
+    'type'		=>'horizontal',    
 )); ?>
  
 <fieldset>
@@ -26,6 +28,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <?php $this->endWidget(); ?>
 
 <script type="text/javascript">
+	// jQuery UI
     $(function() {
         $('#datepicker').datetimepicker();
     });

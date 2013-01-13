@@ -17,7 +17,7 @@ class News extends ApplicationModel {
                 'required'
             ),
             array(
-                'date',
+                'date, content_short',
                 'safe'
             ),
         );

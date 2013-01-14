@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'cms_name'			   => 'Jonah CMS',
+	'cms_name'			   => 'Flow Captain CMS',
     'adminEmail'           => 'info@dynamix.be',
        
     'date_format'          => 'dd-mm-yy',

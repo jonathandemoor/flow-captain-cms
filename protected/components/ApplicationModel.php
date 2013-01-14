@@ -9,6 +9,8 @@ class ApplicationModel extends CActiveRecord {
 			// Set created time
 			$this->created_on = new CDbExpression('NOW()');
 		}
+		
+		$this->updated_on = new CDbExpression('NOW()');
 
 		return parent::save($runValidation, $attributes);
 	}

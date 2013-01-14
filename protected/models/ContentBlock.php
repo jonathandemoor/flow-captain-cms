@@ -13,11 +13,11 @@ class ContentBlock extends ApplicationModel {
     public function rules() {
         return array(
             array(
-                'name,category, title',
+                'name, content, page',
                 'required'
             ),
             array(
-                'content',
+                'title',
                 'safe'
             ),
         );
@@ -25,10 +25,16 @@ class ContentBlock extends ApplicationModel {
     
     public function attributeLabels() {
         return array(
-            'category'       => 'Category',
             'name'           => 'Name',
             'content' 		 => 'Content',
             'title' 		 => 'Title',
+        );
+    }
+    
+    public function findByID($id) {
+        return $this->find(
+            'id = :id',
+            array('id' => $id)
         );
     }
     

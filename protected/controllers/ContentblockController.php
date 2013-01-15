@@ -44,7 +44,7 @@ class ContentblockController extends Controller {
 		    $this->render('admin');
 	    }
     	$model = ContentBlock::model()->findByID($_GET['id']);
-    	    			
+    	    	    			
 		// Validate and save the model
 		if (isset($_POST['ContentBlock'])) {
 			$model->attributes = $_POST['ContentBlock'];
@@ -72,20 +72,30 @@ class ContentblockController extends Controller {
     } 
     
     public function actionAdmin() {
+    	
+    	
+    	
+    	// Relation Pages    
+		$criteria = new CDbCriteria;
+		$criteria->with = array('pages');
+		
+		if(isset($_GET['filter'])) {
+		    $criteria->condition = 'page_id = ' . $_GET['filter'];
+	    }
+		
     	    
 	    // Create the data provider
 		$dataProvider = new CActiveDataProvider(
 			'ContentBlock', array(
-				'criteria' => array(
-					'order'     => 'id DESC',
-					
-			    ),
+				'criteria' => $criteria,			    
 			    'pagination' => array(
 			        'pageSize' => 15,
 			    ),
 			)
 		);
 		
-		$this->render('admin', array('dataProvider' => $dataProvider));
+		$pages = Page::model()->findAllForSelect();
+				
+		$this->render('admin', array('dataProvider' => $dataProvider, 'pages' => $pages));
     }
 }

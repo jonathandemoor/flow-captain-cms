@@ -2,6 +2,8 @@
 
 class ContentBlock extends ApplicationModel {
         
+    
+        
     public static function model($className=__CLASS__) {
         return parent::model($className);
     }
@@ -13,7 +15,7 @@ class ContentBlock extends ApplicationModel {
     public function rules() {
         return array(
             array(
-                'name, content, page',
+                'name, content, page_id',
                 'required'
             ),
             array(
@@ -28,6 +30,13 @@ class ContentBlock extends ApplicationModel {
             'name'           => 'Name',
             'content' 		 => 'Content',
             'title' 		 => 'Title',
+        );
+    }
+    
+    public function relations()
+    {
+        return array(
+            'pages'=>array(self::BELONGS_TO, 'Page', 'page_id'),
         );
     }
     

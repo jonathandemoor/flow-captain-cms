@@ -6,7 +6,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 )); ?>
  
 <fieldset>
-  	<?php echo $form->textFieldRow($model, 'page'); ?>
+  	<?php echo $form->textFieldRow($model, 'page_id'); ?>
     <?php echo $form->textFieldRow($model, 'name', array('hint'=>'Hint: Reference name')); ?>
     <?php echo $form->textFieldRow($model, 'title', array('hint'=>'Hint: Head title of the page')); ?>
     <?php echo $form->textAreaRow($model, 'content'); ?>

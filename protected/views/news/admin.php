@@ -1,5 +1,5 @@
 <div class="page-header">
-    <p class="pull-right">
+    <p class="btn-toolbar pull-right">
         <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Add News',
             'size'  => 'normal',

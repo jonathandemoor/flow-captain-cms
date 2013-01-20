@@ -1,31 +1,16 @@
-body
-{
-	margin: 0;
-	padding: 0;
+body, html {
+	background: url(../images/bg.png) repeat #000;
+	height: 100%;
+	width: 100%;
 }
 
-/* FORMS */
-
-textarea {
-	height: 200px;
-	width: 70%;
-}
-
-/* BOOTSTRAP */
-
-.container.body { 
-	margin-top: 40px;
-}
-
-@media (max-width: 979px) {
-	.navbar .container { width: 724px; }
-}
-
-@media (max-width: 767px) {
-	.navbar .container { width: auto; }
-	
-	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
-		margin-right: 0;
-		margin-left: 0;
-	}
+#content {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+	background: url(../images/logo.png) no-repeat center center;
 }

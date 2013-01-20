@@ -1,1 +1,3 @@
-<h1>Home</h1>
+<div id="content">
+	<div id="logo"></div>
+</div>

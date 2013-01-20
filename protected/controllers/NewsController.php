@@ -1,6 +1,6 @@
 <?php
 
-class NewsController extends Controller {
+class NewsController extends ApplicationController {
     
     public $defaultAction = 'view';
     public $adminActions  = array('admin', 'add', 'update', 'delete');

@@ -1,18 +1,14 @@
 <?php $this->renderPartial('../_partials/jquery_ui') ?>
 	
-<?php
-$form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+<?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'		=>'horizontalForm',
     'type'		=>'horizontal',    
 )); ?>
  
-<fieldset>
-  
+<fieldset>  
     <?php echo $form->textFieldRow($model, 'title'); ?>
     <?php echo $form->textAreaRow($model, 'content'); ?>
-    <?php echo $form->textFieldRow($model, 'date', array('id'=>'datepicker')); ?>
-
- 
+    <?php echo $form->textFieldRow($model, 'date', array('id'=>'datepicker')); ?> 
 </fieldset>
  
 <div class="form-actions">

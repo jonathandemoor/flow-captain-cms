@@ -1,21 +1,9 @@
 <?php
 
-class ContentblockController extends Controller {
+class ContentblockController extends ApplicationController {
     
-    public $defaultAction = 'view';
+    public $defaultAction = 'admin';
     public $adminActions  = array('admin', 'add', 'update', 'delete');
-    
-    public function actionView() {
-    	$model = new ContentBlock();
-    			
-		// Validate and save the model
-		if (isset($_POST['ContentBlock'])) {
-			$model->attributes = $_POST['ContentBlock'];
-			
-		}		
-		
-		$this->render('view', array('model' => $model));
-    } 
     
     public function actionAdd() {
     
@@ -72,8 +60,6 @@ class ContentblockController extends Controller {
     } 
     
     public function actionAdmin() {
-    	
-    	
     	
     	// Relation Pages    
 		$criteria = new CDbCriteria;

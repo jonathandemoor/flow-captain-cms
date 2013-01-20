@@ -1,6 +1,6 @@
 <?php
 
-class AdminController extends Controller {
+class AdminController extends ApplicationController {
     
     public $defaultAction = 'login';
     public $adminActions  = array('home');
@@ -23,8 +23,7 @@ class AdminController extends Controller {
             $image = Yii::app()->image->load(dirname(__FILE__) . '/../../upload/' . 'test.png'); // Instantiate the library
 			$image->resize(400, NULL); // apply image manipulations	
 			$image->save();
-		}
-		
+		}		
 
 		$this->render('home', array('model' => $model));
     }
@@ -36,11 +35,9 @@ class AdminController extends Controller {
         }
         
         $form = new LoginForm();
-        if (isset($_POST['LoginForm'])) {
-        
+        if (isset($_POST['LoginForm'])) {        
         
             $form->attributes = $_POST['LoginForm'];
-            
             
             if ($form->validate() && $form->login()) {
                 $this->redirect(array('admin/home'));

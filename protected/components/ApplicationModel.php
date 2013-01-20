@@ -10,7 +10,23 @@ class ApplicationModel extends CActiveRecord {
 			$this->created_on = new CDbExpression('NOW()');
 		}
 		
-		$this->updated_on = new CDbExpression('NOW()');
+		
+		
+		// For updated records, set the updated fields
+		try {
+			// Set updated time
+			$this->updated_on = new CDbExpression('NOW()');
+
+			// This doesn't work for console applications
+			try {
+				$user = User::model()->findActiveByEmail(Yii::app()->user->name);
+				$this->updated_by = $user->fullname;
+				
+			} catch (Exception $e) {				
+			}
+
+		} catch (Exception $e) {
+		}
 
 		return parent::save($runValidation, $attributes);
 	}

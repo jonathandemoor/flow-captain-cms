@@ -1,53 +1,28 @@
-<?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
-/* @var $form CActiveForm  */
-
-$this->pageTitle=Yii::app()->name . ' - Login';
-$this->breadcrumbs=array(
-	'Login',
-);
-?>
-
-<h1>Login</h1>
-
-<p>Please fill out the following form with your login credentials:</p>
-
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
+<div class="span3"></div>
+<div class="span6 login_main">
+<?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'id'		=>'horizontalForm',
+    'type'		=>'horizontal', 
+    'htmlOptions'=>array('class'=>'well'),   
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<fieldset>
+		<legend>Login - Flow Captain CMS</legend>
+		
+		<?php echo $form->textFieldRow($model, 'email') ?>
+		<?php echo $form->passwordFieldRow($model, 'password') ?>
+		<?php echo $form->checkboxRow($model, 'rememberMe') ?>
+	</fieldset>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
+	<div class="form-actions">
+		<?php echo CHtml::htmlButton('Login', array('class'=>'btn btn-primary', 'type'=>'submit')) ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+        <?php $this->widget('bootstrap.widgets.TbButton', array(
+            'label' => 'Forgot your password',
+            'size'  => 'normal',
+            'url'   => array('site/passReset&username=' . $model['email']),
+        )); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
+</div>

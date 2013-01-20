@@ -8,47 +8,46 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" />
 
 </head>
 
 <body>
-<?php $this->widget('bootstrap.widgets.TbNavbar', array(
-    'type'=>'inverse', // null or 'inverse'
-    'brand'=> Yii::app()->params['cms_name'],
-    'brandUrl'=>'#',
-    'collapse'=>true, // requires bootstrap-responsive.css
-    'items'=>array(
-        array(
-            'class'=>'bootstrap.widgets.TbMenu',
-            'items'=>array(
-                array('label'=>'Home', 'url' => Yii::app()->createUrl('admin/home'), 'active' => ($this->id == 'admin' ? true : false)),
-                array('label'=>'Content', 'url'=> Yii::app()->createUrl('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
-                array('label'=>'News', 'url' => Yii::app()->createUrl('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
-                array('label'=>'Projects', 'url'=>'#'),
-            ),
-        ),
-        array(
-            'class'=>'bootstrap.widgets.TbMenu',
-            'htmlOptions'=>array('class'=>'pull-right'),
-            'items'=>array(
-                array('label'=>'Link', 'url'=>'#'),
-                '---',
-                array('label'=>'Dropdown', 'url'=>'#', 'items'=>array(
-                    array('label'=>'Action', 'url'=>'#'),
-                    array('label'=>'Another action', 'url'=>'#'),
-                    array('label'=>'Something else here', 'url'=>'#'),
-                    '---',
-                    array('label'=>'Separated link', 'url'=>'#'),
-                )),
-            ),
-        ),
-    ),
-)); ?>
-
-<div class="container body">
-	<?php echo $content; ?>
+<div id="headframe">
+	<?php 
+	if($this->user_main) {
+		$this->widget('bootstrap.widgets.TbNavbar', array(
+		    'type'		=>'inverse', 
+		    'brand'		=> Yii::app()->params['cms_name'],
+		    'brandUrl'	=> array('admin/home'),
+		    'collapse'	=>true,
+		    'items'=>array(
+		        array(
+		            'class'=>'bootstrap.widgets.TbMenu',
+		            'items'=>array(
+		                array('label'=>'Content', 'icon'=>'th-list', 'url'=> array('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
+		                array('label'=>'News', 'icon'=>'fire', 'url' => array('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
+		                array('label'=>'Projects', 'icon'=>'briefcase', 'url'=>'#'),
+		            ),
+		        ),
+		        array(
+		            'class'=>'bootstrap.widgets.TbMenu',
+		            'htmlOptions'=>array('class'=>'pull-right'),
+		            'items'=>array(
+		                array('label'=> $this->user_main->fullname, 'icon'=>'user', 'items'=>array(
+		                    array('label'=>'Profile', 'url'=>'#'),
+		                    array('label'=>'Log Out', 'url'=> array('/logout')),
+		                ), 'active' => true),
+		            ),
+		        ),
+		    ),
+		)); 
+	} ?>
+	
+	<div class="container body">
+		<?php echo $content; ?>
+	</div>
 </div>
-
+<div class="footer"></div>
 </body>
 </html>

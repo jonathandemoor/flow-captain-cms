@@ -17,11 +17,14 @@ class User extends ApplicationModel {
                 'length', 'max' => 35, 'min' => 3,
             ),
             array(
-                'username',
+                'email',
                 'unique', 'caseSensitive' => false,
                 'on' => 'create',
             ),
-            array('email', 'email'),
+            array(
+            	'email', 
+            	'email'
+            ),
             array(
                 'username, password, email',
                 'required',
@@ -32,17 +35,19 @@ class User extends ApplicationModel {
     
     public function attributeLabels() {
         return array(
-            'username'  => 'User Name',
+            'fulname'  	=> 'Full Name',
             'password'  => 'Password',
             'email'     => 'Email',
             'is_active' => 'Enabled',
         );
     }
-    
-    public function findActiveUserByName($name) {
-    
+
+    public function findActiveByEmail($email) {
         return $this->findByAttributes(
-            array('username' => $name, 'is_active' => 1)
+            array(
+                'email'     => $email,
+                'is_active' => 1
+            )
         );
     }
     

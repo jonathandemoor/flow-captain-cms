@@ -31,7 +31,7 @@ class NewsController extends ApplicationController {
 			
 			$model['date'] = date('Y-m-d H:i:s', $model_date);
 			
-			$model['content_short'] = substr($model->content, 0, 40) . ' ...';
+			$model['content_short'] = $this->generateShortContent($model->content);
 			
 			if($model->validate()) {
 				$model->save();
@@ -58,8 +58,8 @@ class NewsController extends ApplicationController {
 			$model_date = strtotime($model->date);
 			
 			$model['date'] = date('Y-m-d H:i:s', $model_date);
-			
-			$model['content_short'] = substr($model->content, 0, 40) . ' ...';
+						
+			$model['content_short'] = $this->generateShortContent($model->content);
 			
 			if($model->validate()) {
 				$model->save();
@@ -99,5 +99,13 @@ class NewsController extends ApplicationController {
 		);
 		
 		$this->render('admin', array('dataProvider' => $dataProvider));
+    }
+    
+    private function generateShortContent($text) {
+    	$text_stripped = strip_tags($text);
+    	
+    	$result = substr($text_stripped, 0, 60) . ' ...';
+	    
+	    return $result;
     }
 }

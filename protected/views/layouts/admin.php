@@ -7,13 +7,10 @@
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
-	
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colors.css" />
 </head>
-
 <body>
-<div id="headframe">
 	<?php 
 	if($this->user_main) {
 		$this->widget('bootstrap.widgets.TbNavbar', array(
@@ -47,7 +44,5 @@
 	<div class="container body">
 		<?php echo $content; ?>
 	</div>
-</div>
-<div class="footer"></div>
 </body>
 </html>

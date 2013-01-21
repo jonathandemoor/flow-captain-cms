@@ -17,7 +17,7 @@
     'dataProvider' => $dataProvider,
     'columns'=>array(
         array('name'=>'title', 'header'=>'Title'),
-        array('name'=>'content_short', 'header'=>'Content'),
+        array('name'=>'content_short', 'header'=>'Content Preview'),
         array('name'=>'date', 'header'=>'Date'),
         array(
             'class'=>'bootstrap.widgets.TbButtonColumn',

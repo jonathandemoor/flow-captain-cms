@@ -1,4 +1,5 @@
 <?php $this->renderPartial('../_partials/jquery_ui') ?>
+<?php $this->renderPartial('../_partials/wysiwyg_editor') ?>
 	
 <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'		=>'horizontalForm',
@@ -7,7 +8,7 @@
  
 <fieldset>  
     <?php echo $form->textFieldRow($model, 'title'); ?>
-    <?php echo $form->textAreaRow($model, 'content'); ?>
+    <?php echo $form->textAreaRow($model, 'content', array('id'=>'wysi_textarea')); ?> 
     <?php echo $form->textFieldRow($model, 'date', array('id'=>'datepicker')); ?> 
 </fieldset>
  
@@ -24,8 +25,10 @@
 <?php $this->endWidget(); ?>
 
 <script type="text/javascript">
-	// jQuery UI
     $(function() {
+    	// jQuery UI
         $('#datepicker').datetimepicker();
+        // Wysiwyg html editor
+        $('#wysi_textarea').wysihtml5({"color": true});
     });
 </script>

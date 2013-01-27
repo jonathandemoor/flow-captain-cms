@@ -3,75 +3,17 @@
 class ContentblockController extends ApplicationController {
     
     public $defaultAction = 'admin';
-    public $adminActions  = array('admin', 'add', 'update', 'delete');
-    
-    public function actionAdd() {
-    
-    	$model = new ContentBlock();
-    	    			
-		// Validate and save the model
-		if (isset($_POST['ContentBlock'])) {
-			$model->attributes = $_POST['ContentBlock'];
-			
-			//$model['content_short'] = substr($model->content, 0, 40) . ' ...';
-			
-			if($model->validate()) {
-				$model->save();
-				
-				$this->redirect(array('admin'));
-			}
-			
-		}		
-		
-		$this->render('add', array('model' => $model));
-    } 
-    
-     public function actionUpdate() {
-	    
-	    if(!isset($_GET['id'])) {
-		    $this->render('admin');
-	    }
-    	$model = ContentBlock::model()->findByID($_GET['id']);
-    	    	    			
-		// Validate and save the model
-		if (isset($_POST['ContentBlock'])) {
-			$model->attributes = $_POST['ContentBlock'];
-						
-			if($model->validate()) {
-				$model->save();
-				
-				$this->redirect(array('admin'));
-			}
-			
-		}		
-		
-		$this->render('update', array('model' => $model));
-    } 
-    
-    public function actionDelete() {
-	    
-	    if(!isset($_GET['id'])) {
-		    $this->render('admin');
-	    }
-	    
-    	$model = ContentBlock::model()->findByID($_GET['id']);
-    	
-    	$model->delete();	
-    } 
+    public $adminActions  = array('admin', 'view', 'add', 'update', 'delete');
     
     public function actionAdmin() {
     	
-    	// Relation Pages    
 		$criteria = new CDbCriteria;
-		$criteria->with = array('pages');
 		
 		if(isset($_GET['filter'])) {
 		    $criteria->condition = 'page_id = ' . $_GET['filter'];
 	    }
 		
-    	    
-	    // Create the data provider
-		$dataProvider = new CActiveDataProvider(
+   		$dataProvider = new CActiveDataProvider(
 			'ContentBlock', array(
 				'criteria' => $criteria,			    
 			    'pagination' => array(
@@ -80,8 +22,71 @@ class ContentblockController extends ApplicationController {
 			)
 		);
 		
-		$pages = Page::model()->findAllForSelect();
+		$pages = Page::model()->findAllForFilter();
 				
 		$this->render('admin', array('dataProvider' => $dataProvider, 'pages' => $pages));
+    }
+    
+    public function actionView() {
+				
+		$this->render('view', array('model' => $this->loadModel()));
+    }
+    
+    public function actionAdd() {
+    
+    	$model = new ContentBlock();
+    	    			
+		if (isset($_POST['ContentBlock'])) {
+			$model->attributes = $_POST['ContentBlock'];
+						
+			if($model->validate()) {
+				$model->save();
+				
+				$this->redirect(array('admin'));
+			}			
+		}
+						
+		$this->render('add', array(
+								'model' => $model,
+								'pages'	=> Page::model()->findAllForSelect()
+							 ));
+    } 
+    
+     public function actionUpdate() {
+	    
+    	$model = $this->loadModel();
+    	    	    			
+		if (isset($_POST['ContentBlock'])) {
+			$model->attributes = $_POST['ContentBlock'];
+									
+			if($model->validate()) {
+				$model->save();
+				
+				$this->redirect(array('admin'));
+			}			
+		}	
+				
+		$this->render('update', array(
+								'model' => $model,
+								'pages'	=> Page::model()->findAllForSelect()
+							 ));
+    } 
+    
+    public function actionDelete() {
+	    
+    	$model = $this->loadModel();
+    	
+    	$model->delete();	
+    } 
+    
+    protected function loadModel() {
+        if (!isset($_GET['id'])) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        $model = ContentBlock::model()->findByPk($_GET['id']);
+        if (!$model) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $model;
     }
 }

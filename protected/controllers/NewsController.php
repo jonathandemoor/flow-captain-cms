@@ -2,90 +2,11 @@
 
 class NewsController extends ApplicationController {
     
-    public $defaultAction = 'view';
-    public $adminActions  = array('admin', 'add', 'update', 'delete');
-    
-    public function actionView() {
-    	$model = new News();
-    			
-		// Validate and save the model
-		if (isset($_POST['News'])) {
-			$model->attributes = $_POST['News'];
-			
-		}		
-		
-		$this->render('view', array('model' => $model));
-    } 
-    
-    public function actionAdd() {
-    
-    	$model = new News();
-    	
-    	$model['date'] = date('m/d/Y H:i');
-    			
-		// Validate and save the model
-		if (isset($_POST['News'])) {
-			$model->attributes = $_POST['News'];
-			
-			$model_date = strtotime($model->date);
-			
-			$model['date'] = date('Y-m-d H:i:s', $model_date);
-			
-			$model['content_short'] = $this->generateShortContent($model->content);
-			
-			if($model->validate()) {
-				$model->save();
-				
-				$this->redirect(array('admin'));
-			}
-			
-		}		
-		
-		$this->render('add', array('model' => $model));
-    } 
-    
-     public function actionUpdate() {
-	    
-	    if(!isset($_GET['id'])) {
-		    $this->render('admin');
-	    }
-    	$model = News::model()->findByID($_GET['id']);
-    	    			
-		// Validate and save the model
-		if (isset($_POST['News'])) {
-			$model->attributes = $_POST['News'];
-			
-			$model_date = strtotime($model->date);
-			
-			$model['date'] = date('Y-m-d H:i:s', $model_date);
-						
-			$model['content_short'] = $this->generateShortContent($model->content);
-			
-			if($model->validate()) {
-				$model->save();
-				
-				$this->redirect(array('admin'));
-			}
-			
-		}		
-		
-		$this->render('update', array('model' => $model));
-    } 
-    
-    public function actionDelete() {
-	    
-	    if(!isset($_GET['id'])) {
-		    $this->render('admin');
-	    }
-	    
-    	$model = News::model()->findByID($_GET['id']);
-    	
-    	$model->delete();	
-    } 
+    public $defaultAction = 'admin';
+    public $adminActions  = array('admin', 'view', 'add', 'update', 'delete');
     
     public function actionAdmin() {
     	    
-	    // Create the data provider
 		$dataProvider = new CActiveDataProvider(
 			'News', array(
 				'criteria' => array(
@@ -101,11 +22,82 @@ class NewsController extends ApplicationController {
 		$this->render('admin', array('dataProvider' => $dataProvider));
     }
     
+    public function actionView() {
+    	    		
+		$this->render('view', array('model' => $this->loadModel()));
+    } 
+    
+    public function actionAdd() {
+    
+    	$model = new News();
+    	
+    	$model['date'] = date('m/d/Y H:i');
+    			
+		if (isset($_POST['News'])) {
+			$model->attributes = $_POST['News'];
+			
+			$model_date = strtotime($model->date);
+			
+			$model['date'] = $model_date;
+			
+			$model['content_short'] = $this->generateShortContent($model->content);
+			
+			if($model->validate()) {
+				$model->save();
+				
+				$this->redirect(array('admin'));
+			}			
+		}		
+		
+		$this->render('add', array('model' => $model));
+    } 
+    
+     public function actionUpdate() {
+	    
+	    $model = $this->loadModel();
+    	    			
+		if (isset($_POST['News'])) {
+			$model->attributes = $_POST['News'];
+			
+			$model_date = strtotime($model->date);
+			
+			$model['date'] = $model_date;
+						
+			$model['content_short'] = $this->generateShortContent($model->content);
+			
+			if($model->validate()) {
+				$model->save();
+				
+				$this->redirect(array('admin'));
+			}			
+		}		
+		
+		$this->render('update', array('model' => $model));
+    } 
+    
+    public function actionDelete() {
+	    
+    	$model = $this->loadModel();
+    	
+    	$model->delete();	
+    } 
+    
     private function generateShortContent($text) {
     	$text_stripped = strip_tags($text);
     	
     	$result = substr($text_stripped, 0, 60) . ' ...';
 	    
 	    return $result;
+    }
+    
+    protected function loadModel() {
+        if (!isset($_GET['id'])) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        $model = News::model()->findByPk($_GET['id']);
+        if (!$model) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        return $model;
     }
 }

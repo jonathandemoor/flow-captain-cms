@@ -32,7 +32,7 @@ class Page extends ApplicationModel {
         );
     }
     
-    public function findAllForSelect() {
+    public function findAllForFilter() {
 	    $pages = $this->findAll();
 	    
 	    $result = array();
@@ -58,5 +58,20 @@ class Page extends ApplicationModel {
 	    $result[] = $item;
 	    
 	    return $result;
-    }    
+    } 
+    
+    public function findAllForSelect() {
+    	$pages = $this->findAll();
+	    
+	    $result = array();
+	    
+	    $result[''] = '-- Select Page --';
+	    
+	    // Loop over pages
+	    foreach($pages as $page) {			    
+		    $result[$page->id] = $page->name;
+	    }
+	    
+	    return $result;
+    }   
 }

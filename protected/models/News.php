@@ -27,6 +27,7 @@ class News extends ApplicationModel {
         return array(
             'content' 		 => 'Content',
             'title' 		 => 'Title',
+            'date'			 => 'News date'
         );
     }
     

@@ -30,6 +30,8 @@ class ContentBlock extends ApplicationModel {
             'name'           => 'Name',
             'content' 		 => 'Content',
             'title' 		 => 'Title',
+            'page_id'		 => 'Page',
+            'pages.name'	 => 'Page'
         );
     }
     

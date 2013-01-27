@@ -62,7 +62,6 @@ return array(
 		'db'=> include(dirname(__FILE__) . '/db.php'),
 		
 		'errorHandler'=>array(
-			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
 		),
 		'log'=>array(

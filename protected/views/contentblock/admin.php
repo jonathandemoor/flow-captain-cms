@@ -2,8 +2,8 @@
 	<div class="btn-toolbar pull-right">
 
 		<?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
-	        'buttons'=>array(
-	            array('label'=>'Filter on page', 'items'=> $pages)
+	        'buttons' => array(
+	            array('label' => 'Filter on page', 'items'=> $pages)
 	        ),
 	    )); ?>
 	    
@@ -11,7 +11,7 @@
             'label' => 'Add Content Block',
             'size'  => 'normal',
             'url'   => array('contentblock/add'),
-            'type'	=>'primary'
+            'type'	=> 'primary'
         )); ?>
         
     </div>
@@ -20,17 +20,17 @@
 </div>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped bordered',
+    'type' => 'striped bordered',
     'enableSorting' => false,
     'dataProvider' => $dataProvider,
     'columns'=>array(
-    	array('name'=>'name', 'header'=>'Name'),
-        array('name'=>'title', 'header'=>'Title'),
-        array('name'=>'pages.name', 'header'=>'Page'),
+    	array('name' => 'name', 'header' => 'Name'),
+        array('name' => 'title', 'header' => 'Title'),
+        array('name' => 'pages.name', 'header' => 'Page'),
         array(
-            'class'=>'bootstrap.widgets.TbButtonColumn',
-            'template'=>' {update} {delete}',
-            'htmlOptions'=>array('style'=>'width: 50px; text-align: center;'),
+            'class'		  => 'bootstrap.widgets.TbButtonColumn',
+            'template'	  => '{view} {update} {delete}',
+            'htmlOptions' => array('style' => 'width: 50px; text-align: center;'),
         ),
     ),
 )); ?>

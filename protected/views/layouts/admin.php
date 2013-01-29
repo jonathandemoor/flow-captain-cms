@@ -22,19 +22,29 @@
 		        array(
 		            'class'=>'bootstrap.widgets.TbMenu',
 		            'items'=>array(
-		                array('label'=>'Content', 'icon'=>'th-list', 'url'=> array('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
-		                array('label'=>'News', 'icon'=>'fire', 'url' => array('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
-		                array('label'=>'Projects', 'icon'=>'briefcase', 'url'=>'#'),
+		                array('label'=>'Content', 'icon' => 'th-list', 'url'=> array('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
+		                array('label'=>'News', 'icon' => 'fire', 'url' => array('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
+		                array('label'=>'Projects', 'icon' => 'briefcase', 'url' => '#'),
 		            ),
 		        ),
 		        array(
 		            'class'=>'bootstrap.widgets.TbMenu',
 		            'htmlOptions'=>array('class'=>'pull-right'),
 		            'items'=>array(
-		                array('label'=> $this->user_main->fullname, 'icon'=>'user', 'items'=>array(
-		                    array('label'=>'Profile', 'url'=>'#'),
-		                    array('label'=>'Log Out', 'url'=> array('/logout')),
+		                array('label' => $this->user_main->fullname, 'icon' => 'user', 'items'=>array(
+		                    array('label' => 'Profile', 'url' => '#'),
+		                    array('label' => 'Log Out', 'url' => array('/logout')),
 		                ), 'active' => true),
+		            ),
+		        ),
+		        array(
+		            'class'=>'bootstrap.widgets.TbMenu',
+		            'htmlOptions'=>array('class'=>'pull-right'),
+		            'items'=>array(
+		                array('label' => Manage, 'items' =>array(
+		                    array('label' =>'Users', 'url' => array('user/admin')),
+		                    array('label' =>'Pages', 'url' => array('page/admin')),
+		                ), 'active' => ($this->id == 'user' || $this->id == 'page' ? true : false)),
 		            ),
 		        ),
 		    ),

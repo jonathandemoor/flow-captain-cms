@@ -3,7 +3,7 @@
 	if(!empty($model->updated_on)) {
 		$this->widget('bootstrap.widgets.TbLabel', array(
 		    'type'	=>'default',
-		    'label'	=> 'Updated on: ' . $model->updated_on,
+		    'label'	=> 'Updated on: ' . date('H:m - d M Y', $model->updated_on),
 		)); 
 	}
 ?>

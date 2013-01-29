@@ -4,7 +4,7 @@
             'label' => 'Add News',
             'size'  => 'normal',
             'url'   => array('news/add'),
-            'type'	=>'primary'
+            'type'	=> 'primary'
         )); ?>
     </p>
 
@@ -12,17 +12,21 @@
 </div>
 
 <?php $this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped bordered',
+    'type' => 'striped bordered',
     'enableSorting' => false,
     'dataProvider' => $dataProvider,
-    'columns'=>array(
-        array('name'=>'title', 'header'=>'Title'),
-        array('name'=>'content_short', 'header'=>'Content Preview'),
-        array('name'=>'date', 'header'=>'Date'),
+    'columns' => array(
+        array('name' => 'title', 'header' => 'Title'),
+        array('name' => 'content_short', 'header' => 'Content Preview'),
         array(
-            'class'=>'bootstrap.widgets.TbButtonColumn',
-            'template'=>' {update} {delete}',
-            'htmlOptions'=>array('style'=>'width: 50px; text-align: center;'),
+        	'name'  => 'date',
+        	'type'  => 'raw',
+            'value' => "date('H:m - d M Y', \$data->date)"
+        ),
+        array(
+            'class'			=> 'bootstrap.widgets.TbButtonColumn',
+            'template'		=> '{view} {update} {delete}',
+            'htmlOptions'	=>  array('style' => 'width: 50px; text-align: center;'),
         ),
     ),
 )); ?>

@@ -5,7 +5,7 @@
 )); ?>
  
 <fieldset>
-  	<?php echo $form->textFieldRow($model, 'page_id'); ?>
+  	<?php echo $form->dropDownListRow($model, 'page_id', $pages); ?>
     <?php echo $form->textFieldRow($model, 'name', array('hint'=>'Hint: Reference name')); ?>
     <?php echo $form->textFieldRow($model, 'title', array('hint'=>'Hint: Head title of the page')); ?>
     <?php echo $form->textAreaRow($model, 'content', array('id'=>'wysi_textarea')); ?>

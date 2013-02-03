@@ -24,7 +24,7 @@
 		            'items'=>array(
 		                array('label'=>'Content', 'icon' => 'th-list', 'url'=> array('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
 		                array('label'=>'News', 'icon' => 'fire', 'url' => array('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
-		                array('label'=>'Projects', 'icon' => 'briefcase', 'url' => '#'),
+		                array('label'=>'Projects', 'icon' => 'briefcase', 'url' => array('project/admin'), 'active' => ($this->id == 'project' ? true : false)),
 		            ),
 		        ),
 		        array(
@@ -32,7 +32,7 @@
 		            'htmlOptions'=>array('class'=>'pull-right'),
 		            'items'=>array(
 		                array('label' => $this->user_main->fullname, 'icon' => 'user', 'items'=>array(
-		                    array('label' => 'Profile', 'url' => '#'),
+		                    array('label' => 'Profile', 'url' => array('admin/profile')),
 		                    array('label' => 'Log Out', 'url' => array('/logout')),
 		                ), 'active' => true),
 		            ),

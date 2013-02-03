@@ -43,7 +43,11 @@ class UserController extends ApplicationController {
 			}			
 		}		
 		
-		$this->render('add', array('model' => $model));
+		$this->render('add', 
+						array(
+							'model' => $model,
+							'roles'	=> Role::model()->findAllForSelect()
+						));
     } 
     
      public function actionUpdate() {
@@ -63,7 +67,11 @@ class UserController extends ApplicationController {
 			}
 		}		
 		
-		$this->render('update', array('model' => $model));
+		$this->render('update', 
+						array(
+							'model' => $model,
+							'roles'	=> Role::model()->findAllForSelect()
+						));
     } 
     
     public function actionDelete() {

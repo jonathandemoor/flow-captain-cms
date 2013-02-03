@@ -21,10 +21,11 @@ class ContentblockController extends ApplicationController {
 			    ),
 			)
 		);
-		
-		$pages = Page::model()->findAllForFilter();
-				
-		$this->render('admin', array('dataProvider' => $dataProvider, 'pages' => $pages));
+						
+		$this->render('admin', array(
+								'dataProvider' => $dataProvider, 
+								'pages' => Page::model()->findAllForFilter()
+								));
     }
     
     public function actionView() {
@@ -38,6 +39,8 @@ class ContentblockController extends ApplicationController {
     	    			
 		if (isset($_POST['ContentBlock'])) {
 			$model->attributes = $_POST['ContentBlock'];
+			
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 						
 			if($model->validate()) {
 				$model->save();
@@ -58,6 +61,8 @@ class ContentblockController extends ApplicationController {
     	    	    			
 		if (isset($_POST['ContentBlock'])) {
 			$model->attributes = $_POST['ContentBlock'];
+			
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 									
 			if($model->validate()) {
 				$model->save();

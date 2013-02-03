@@ -7,7 +7,7 @@ class ProjectController extends ApplicationController {
     
     public function actionAdmin() {
 		
-   		$dataProvider = new CActiveDataProvider(
+   		$items = new CActiveDataProvider(
 			'Project', array(
 			    'pagination' => array(
 			        'pageSize' => 15,
@@ -15,7 +15,7 @@ class ProjectController extends ApplicationController {
 			)
 		);
 						
-		$this->render('admin', array('dataProvider' => $dataProvider));
+		$this->render('admin', array('items' => $items));
     }
     
     public function actionView() {
@@ -31,6 +31,8 @@ class ProjectController extends ApplicationController {
     	    			
 		if (isset($_POST['Project'])) {
 			$model->attributes = $_POST['Project'];
+			
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 						
 			if($model->validate()) {
 				$model->save();
@@ -50,6 +52,8 @@ class ProjectController extends ApplicationController {
     	    	    			
 		if (isset($_POST['Project'])) {
 			$model->attributes = $_POST['Project'];
+			
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 									
 			if($model->validate()) {
 				$model->save();

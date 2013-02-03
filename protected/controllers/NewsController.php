@@ -40,7 +40,7 @@ class NewsController extends ApplicationController {
 			
 			$model['date'] = $model_date;
 			
-			$model['content_short'] = $this->generateShortContent($model->content);
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 			
 			if($model->validate()) {
 				$model->save();
@@ -63,7 +63,7 @@ class NewsController extends ApplicationController {
 			
 			$model['date'] = $model_date;
 						
-			$model['content_short'] = $this->generateShortContent($model->content);
+			$model['content_short'] = FCTools::generateShortContent($model->content);
 			
 			if($model->validate()) {
 				$model->save();
@@ -81,14 +81,6 @@ class NewsController extends ApplicationController {
     	
     	$model->delete();	
     } 
-    
-    private function generateShortContent($text) {
-    	$text_stripped = strip_tags($text);
-    	
-    	$result = substr($text_stripped, 0, 60) . ' ...';
-	    
-	    return $result;
-    }
     
     protected function loadModel() {
         if (!isset($_GET['id'])) {

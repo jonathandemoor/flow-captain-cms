@@ -2,8 +2,6 @@
 
 class ContentBlock extends ApplicationModel {
         
-    
-        
     public static function model($className=__CLASS__) {
         return parent::model($className);
     }
@@ -19,7 +17,7 @@ class ContentBlock extends ApplicationModel {
                 'required'
             ),
             array(
-                'title',
+                'title, content_short',
                 'safe'
             ),
         );
@@ -31,7 +29,8 @@ class ContentBlock extends ApplicationModel {
             'content' 		 => 'Content',
             'title' 		 => 'Title',
             'page_id'		 => 'Page',
-            'pages.name'	 => 'Page'
+            'pages.name'	 => 'Page',
+            'content_short'	 => 'Content Preview'
         );
     }
     
@@ -55,31 +54,4 @@ class ContentBlock extends ApplicationModel {
             array('name' => $name)
         );
     }
-    
-    public function findByCategory($category) {
-        return $this->findAll(
-        	'category = :category',
-        	array('category' => $category)
-        );
-    }
-    
-    public function findCategoriesForSelect() {
-        $categories = $this->findAll(
-            array('select' => 'distinct category', 'order' => 'category')
-        );
-        return $this->resultForSelect(
-            $categories, 'category', 'category', false
-        );
-    }
-        
-    public function findAllAdmin($category) {
-        $criteria = new CDbCriteria();
-        $criteria->order = 'category, name';
-        if (!empty($category)) {
-            $criteria->condition = 'category = :category';
-            $criteria->params    = array('category' => $category);
-        }
-        return $this->findAll($criteria);
-    }
-    
 }

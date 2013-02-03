@@ -27,7 +27,8 @@ class News extends ApplicationModel {
         return array(
             'content' 		 => 'Content',
             'title' 		 => 'Title',
-            'date'			 => 'News date'
+            'date'			 => 'News date',
+            'content_short'	 => 'Content Preview'
         );
     }
     
@@ -37,5 +38,4 @@ class News extends ApplicationModel {
             array('id' => $id)
         );
     }
-    
 }

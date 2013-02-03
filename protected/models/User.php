@@ -50,7 +50,7 @@ class User extends ApplicationModel {
             	'email'
             ),
             array(
-                'fullname, email',
+                'fullname, email, role_id',
                 'required',
             ),
             array('is_active', 'in', 'range'=>range(0, 1)),
@@ -65,6 +65,13 @@ class User extends ApplicationModel {
             'password_new'  	=> 'Password',
             'email'     		=> 'Email',
             'is_active' 		=> 'Enabled',
+            'role_id'			=> 'Role'
+        );
+    }
+    
+    public function relations() {
+        return array(
+            'role' => array(self::BELONGS_TO, 'Role', 'role_id'),
         );
     }
     

@@ -14,23 +14,23 @@
 	<?php 
 	if($this->user_main) {
 		$this->widget('bootstrap.widgets.TbNavbar', array(
-		    'type'		=>'inverse', 
+		    'type'		=> 'inverse', 
 		    'brand'		=> Yii::app()->params['cms_name'],
 		    'brandUrl'	=> array('admin/home'),
-		    'collapse'	=>true,
+		    'collapse'	=> true,
 		    'items'=>array(
 		        array(
-		            'class'=>'bootstrap.widgets.TbMenu',
-		            'items'=>array(
-		                array('label'=>'Content', 'icon' => 'th-list', 'url'=> array('contentblock/admin'), 'active' => ($this->id == 'contentblock' ? true : false)),
-		                array('label'=>'News', 'icon' => 'fire', 'url' => array('news/admin'), 'active' => ($this->id == 'news' ? true : false)),
-		                array('label'=>'Projects', 'icon' => 'briefcase', 'url' => array('project/admin'), 'active' => ($this->id == 'project' ? true : false)),
+		            'class' => 'bootstrap.widgets.TbMenu',
+		            'items' => array(
+		                array('label' => 'Content', 'icon' => 'th-list', 'url'=> array('contentblock/index'), 'active' => ($this->id == 'contentblock' ? true : false)),
+		                array('label' => 'News', 'icon' => 'fire', 'url' => array('news/index'), 'active' => ($this->id == 'news' ? true : false)),
+		                array('label' => 'Projects', 'icon' => 'briefcase', 'url' => array('project/index'), 'active' => ($this->id == 'project' ? true : false)),
 		            ),
 		        ),
 		        array(
-		            'class'=>'bootstrap.widgets.TbMenu',
-		            'htmlOptions'=>array('class'=>'pull-right'),
-		            'items'=>array(
+		            'class' => 'bootstrap.widgets.TbMenu',
+		            'htmlOptions' => array('class' => 'pull-right'),
+		            'items' => array(
 		                array('label' => $this->user_main->fullname, 'icon' => 'user', 'items'=>array(
 		                    array('label' => 'Profile', 'url' => array('admin/profile')),
 		                    array('label' => 'Log Out', 'url' => array('/logout')),
@@ -38,13 +38,14 @@
 		            ),
 		        ),
 		        array(
-		            'class'=>'bootstrap.widgets.TbMenu',
-		            'htmlOptions'=>array('class'=>'pull-right'),
+		            'class' => 'bootstrap.widgets.TbMenu',
+		            'htmlOptions' => array('class'=>'pull-right'),
 		            'items'=>array(
 		                array('label' => Manage, 'items' =>array(
-		                    array('label' =>'Users', 'url' => array('user/admin')),
-		                    array('label' =>'Pages', 'url' => array('page/admin')),
-		                ), 'active' => ($this->id == 'user' || $this->id == 'page' ? true : false)),
+		                    array('label' => 'Users', 'url' => array('user/index')),
+		                    array('label' => 'Roles', 'url' => array('role/index')),
+		                    array('label' => 'Pages', 'url' => array('page/index')),
+		                ), 'active' => ($this->id == 'user' || $this->id == 'page' || $this->id == 'role' ? true : false)),
 		            ),
 		        ),
 		    ),

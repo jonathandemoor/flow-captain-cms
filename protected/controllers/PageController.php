@@ -2,10 +2,10 @@
 
 class PageController extends ApplicationController {
     
-    public $defaultAction = 'admin';
-    public $adminActions  = array('admin','view', 'add', 'update', 'delete');
+    public $defaultAction = 'index';
+    public $adminActions  = array('index','view', 'add', 'update', 'delete');
     
-    public function actionAdmin() {
+    public function actionIndex() {
     	    
 		$dataProvider = new CActiveDataProvider(
 			'Page', array(
@@ -19,7 +19,7 @@ class PageController extends ApplicationController {
 			)
 		);
 		
-		$this->render('admin', array('dataProvider' => $dataProvider));
+		$this->render('index', array('dataProvider' => $dataProvider));
     } 
     
     public function actionView() {
@@ -37,7 +37,7 @@ class PageController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}		
 		
@@ -54,7 +54,7 @@ class PageController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}		
 		

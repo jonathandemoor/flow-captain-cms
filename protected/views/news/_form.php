@@ -18,7 +18,7 @@
     <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Cancel',
             'size'  => 'normal',
-            'url'   => array('news/admin'),
+            'url'   => array('news/index'),
         )); ?>
 </div>
  

@@ -2,10 +2,10 @@
 
 class ContentblockController extends ApplicationController {
     
-    public $defaultAction = 'admin';
-    public $adminActions  = array('admin', 'view', 'add', 'update', 'delete');
+    public $defaultAction = 'index';
+    public $adminActions  = array('index', 'view', 'add', 'update', 'delete');
     
-    public function actionAdmin() {
+    public function actionIndex() {
     	
 		$criteria = new CDbCriteria;
 		
@@ -22,7 +22,7 @@ class ContentblockController extends ApplicationController {
 			)
 		);
 						
-		$this->render('admin', array(
+		$this->render('index', array(
 								'dataProvider' => $dataProvider, 
 								'pages' => Page::model()->findAllForFilter()
 								));
@@ -45,7 +45,7 @@ class ContentblockController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}
 						
@@ -67,7 +67,7 @@ class ContentblockController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}	
 				

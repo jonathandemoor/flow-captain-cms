@@ -3,7 +3,7 @@
         <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Back',
             'size'  => 'normal',
-            'url'   => array('page/admin'),
+            'url'   => array('page/index'),
         )); ?>
     </p>
     <h1>Page Detail</h1>

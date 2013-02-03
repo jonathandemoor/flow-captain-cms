@@ -22,7 +22,7 @@
     <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Cancel',
             'size'  => 'normal',
-            'url'   => array('user/admin'),
+            'url'   => array('user/index'),
         )); ?>
 </div>
  

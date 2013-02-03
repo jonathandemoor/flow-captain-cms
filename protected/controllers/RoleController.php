@@ -2,6 +2,7 @@
 
 class RoleController extends ApplicationController {
 
+	public $defaultAction = 'index';
 	public $adminActions  = array('index', 'view', 'add', 'update', 'delete');
 
     public function actionIndex() {
@@ -27,7 +28,7 @@ class RoleController extends ApplicationController {
             $item->attributes = $_POST['Role'];
             
             if ($item->save()) {
-                $this->redirect(array('role/index'));
+                $this->redirect(array('index'));
             }
         }
 
@@ -45,7 +46,7 @@ class RoleController extends ApplicationController {
             $item->attributes = $_POST['Role'];
             
             if ($item->save()) {
-                $this->redirect(array('role/index'));
+                $this->redirect(array('index'));
             }
         }
 

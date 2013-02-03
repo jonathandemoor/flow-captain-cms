@@ -3,7 +3,7 @@
         <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Back',
             'size'  => 'normal',
-            'url'   => array('contentBlock/admin'),
+            'url'   => array('contentBlock/index'),
         )); ?>
     </p>
     <h1>Add Content</h1>

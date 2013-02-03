@@ -3,7 +3,7 @@
         <?php $this->widget('bootstrap.widgets.TbButton', array(
             'label' => 'Back',
             'size'  => 'normal',
-            'url'   => array('user/admin'),
+            'url'   => array('user/index'),
         )); ?>
     </p>
     <h1>Add User</h1>

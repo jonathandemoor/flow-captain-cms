@@ -2,10 +2,10 @@
 
 class ProjectController extends ApplicationController {
     
-    public $defaultAction = 'admin';
-    public $adminActions  = array('admin', 'view', 'add', 'update', 'delete');
+    public $defaultAction = 'index';
+    public $adminActions  = array('index', 'view', 'add', 'update', 'delete');
     
-    public function actionAdmin() {
+    public function actionIndex() {
 		
    		$items = new CActiveDataProvider(
 			'Project', array(
@@ -15,14 +15,12 @@ class ProjectController extends ApplicationController {
 			)
 		);
 						
-		$this->render('admin', array('items' => $items));
+		$this->render('index', array('items' => $items));
     }
     
     public function actionView() {
 				
-		$this->render('view', array(
-								'model' => $this->loadModel()
-								));
+		$this->render('view', array('model' => $this->loadModel()));
     }
     
     public function actionAdd() {
@@ -37,13 +35,11 @@ class ProjectController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}
 						
-		$this->render('add', array(
-								'model' => $model,
-							 ));
+		$this->render('add', array('model' => $model));
     } 
     
      public function actionUpdate() {
@@ -58,13 +54,11 @@ class ProjectController extends ApplicationController {
 			if($model->validate()) {
 				$model->save();
 				
-				$this->redirect(array('admin'));
+				$this->redirect(array('index'));
 			}			
 		}	
 				
-		$this->render('update', array(
-								'model' => $model,
-							 ));
+		$this->render('update', array('model' => $model));
     } 
     
     public function actionDelete() {

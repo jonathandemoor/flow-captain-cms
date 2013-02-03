@@ -8,6 +8,7 @@ class m130202_191318_tbl_projects extends CDbMigration
         $this->createTable('tbl_projects', array(
             'id'							=> 'pk',
 			'title'							=> 'string not null',
+			'content_short'					=> 'string',
 			'content'						=> 'text',
 			'url'							=> 'string',
             'created_on'					=> 'int',

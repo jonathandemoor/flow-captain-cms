@@ -12,6 +12,7 @@ class m130202_184221_tbl_users extends CDbMigration
 			'email'						=> 'string not null',
 			'role_id'					=> 'int',
 			'is_active'					=> 'boolean',
+			'last_login'				=> 'int',
             'created_on'				=> 'int',
             'created_by'				=> 'string',
             'updated_on'				=> 'int',

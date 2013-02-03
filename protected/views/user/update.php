@@ -9,6 +9,10 @@
     <h1>Update User</h1>
 </div>
 
-<?php $this->renderPartial('_form', array('model' => $model)) ?>
+<?php $this->renderPartial('_form', array(
+										'model' => $model,
+										'roles' => $roles
+									)) ?>
+									
 <?php $this->renderPartial('../_partials/additional_info', array('model' => $model)) ?>
 

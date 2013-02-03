@@ -12,6 +12,7 @@
     	<?php echo $form->passwordFieldRow($model, 'password_new'); ?>
     <?php } ?>
     <?php echo $form->passwordFieldRow($model, 'password_repeat'); ?>
+    <?php echo $form->dropDownListRow($model, 'role_id', $roles); ?>
     <?php echo $form->checkboxRow($model, 'is_active'); ?> 
 </fieldset>
  

@@ -9,4 +9,7 @@
     <h1>Add User</h1>
 </div>
 
-<?php $this->renderPartial('_form', array('model' => $model)) ?>
+<?php $this->renderPartial('_form', array(
+										'model' => $model,
+										'roles' => $roles
+									)) ?>

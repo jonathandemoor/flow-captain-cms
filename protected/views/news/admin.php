@@ -16,8 +16,8 @@
     'enableSorting' => false,
     'dataProvider' => $dataProvider,
     'columns' => array(
-        array('name' => 'title', 'header' => 'Title'),
-        array('name' => 'content_short', 'header' => 'Content Preview'),
+        array('name' => 'title'),
+        array('name' => 'content_short'),
         array(
         	'name'  => 'date',
         	'type'  => 'raw',

@@ -24,9 +24,10 @@
     'enableSorting' => false,
     'dataProvider' => $dataProvider,
     'columns'=>array(
-    	array('name' => 'name', 'header' => 'Name'),
-        array('name' => 'title', 'header' => 'Title'),
-        array('name' => 'pages.name', 'header' => 'Page'),
+    	array('name' => 'name'),
+        array('name' => 'title'),
+        array('name' => 'pages.name'),
+        array('name' => 'content_short'),
         array(
             'class'		  => 'bootstrap.widgets.TbButtonColumn',
             'template'	  => '{view} {update} {delete}',

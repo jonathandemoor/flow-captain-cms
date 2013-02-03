@@ -19,6 +19,11 @@
         array('name' => 'fullname', 'header'=>'Name'),
         array('name' => 'email', 'header'=>'Email'),
         array(
+        	'name'  => 'role',
+        	'type'  => 'raw',
+            'value' => '$data->role->name'
+        ),
+        array(
             'class'			=> 'bootstrap.widgets.TbButtonColumn',
             'template'		=> '{view} {update} {delete}',
             'htmlOptions'	=> array('style' => 'width: 50px; text-align: center;'),

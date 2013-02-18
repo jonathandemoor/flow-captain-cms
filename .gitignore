@@ -4,3 +4,4 @@ themes/classic/views/
 upload/
 .DS_Store
 db.php
+/protected/runtime/application.log

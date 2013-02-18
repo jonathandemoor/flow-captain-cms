@@ -27,6 +27,18 @@ textarea {
 	margin-top: 40px;
 }
 
+.span2.left {
+	margin-left: 0;
+}
+
+.span2.left .well.pages {
+	margin-top: 45px;
+}
+
+.span2.left .well.pages.none {
+	margin-top: 20px;
+}
+
 @media (max-width: 979px) {
 	.navbar .container { width: 724px; }
 }

@@ -41,7 +41,7 @@ class Page extends ApplicationModel {
 	    foreach($pages as $page) {
 		    $item = array();
 		    $item['label'] = $page->name;
-		    $item['url'] = array('contentBlock/admin/filter/' . $page->id);
+		    $item['url']   = array('contentBlock/index/filter/' . $page->id);
 		    
 		    $result[] = $item;
 	    }
@@ -51,11 +51,35 @@ class Page extends ApplicationModel {
 		
 		// Add Reset btn    
 		$item = array();
-	    $item['label'] = 'All Pages';
-	    $item['url'] = array('contentBlock/admin');
+	    $item['label']  = 'All Pages';
+	    $item['url']    = array('contentBlock/index');
 	    $item['active'] = false;
 	    
 	    $result[] = $item;
+	    
+	    return $result;
+    } 
+    
+    public function findAllForList() {
+	    $pages = $this->findAll();
+	    
+	    $result = array();
+	    
+	    // Title    
+		$item = array();
+	    $item['label'] = 'Pages';
+	    
+	    $result[] = $item;
+	    
+	    // Loop over pages
+	    foreach($pages as $page) {
+		    $item = array();
+		    $item['label'] = $page->name;
+		    $item['url']   = array('contentBlock/index/filter/' . $page->id);
+		    $item['icon']  = 'file';
+		    
+		    $result[] = $item;
+	    }
 	    
 	    return $result;
     } 

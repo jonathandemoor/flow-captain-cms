@@ -24,7 +24,7 @@ class ContentblockController extends ApplicationController {
 						
 		$this->render('index', array(
 								'dataProvider' => $dataProvider, 
-								'pages' => Page::model()->findAllForFilter()
+								'pages_list'   => Page::model()->findAllForList(),
 								));
     }
     

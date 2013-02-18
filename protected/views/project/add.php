@@ -11,4 +11,5 @@
 
 <?php $this->renderPartial('_form', array(
 										'model' => $model,
+										'photos' => $photos
 									 )) ?>

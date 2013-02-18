@@ -24,6 +24,14 @@ class ProjectController extends ApplicationController {
     }
     
     public function actionAdd() {
+    	
+    	Yii::import("xupload.models.XUploadForm");
+		
+		// Remove layout	
+		$this->layout = 'upload';
+
+	    $photos = new XUploadForm;
+	    
     
     	$model = new Project();
     	    			
@@ -39,7 +47,11 @@ class ProjectController extends ApplicationController {
 			}			
 		}
 						
-		$this->render('add', array('model' => $model));
+		$this->render('add', 
+			array(
+				'model'  => $model,
+				'photos' => $photos
+			));
     } 
     
      public function actionUpdate() {

@@ -21,6 +21,11 @@ textarea {
 	padding: 0;
 }
 
+/* UPLOAD FORM */
+#upload_container {
+	margin: 0 0 0 180px;
+}
+
 /* BOOTSTRAP */
 
 .container.body { 

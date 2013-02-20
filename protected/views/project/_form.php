@@ -1,38 +1,32 @@
 <?php $this->renderPartial('../_partials/wysiwyg_editor') ?>
 <?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'		=>'xupluad_iwt',
+    'id'		=>'xupluad_form',
     'type'		=>'horizontal',    
     'enableAjaxValidation' => false,
       'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
- 
+<legend>Project Details</legend>
 <fieldset>
     <?php echo $form->textFieldRow($model, 'title'); ?>
     <?php echo $form->textAreaRow($model, 'content', array('id'=>'wysi_textarea')); ?>
 </fieldset>
 
-  
-  
-  
-  
-        <?php $this->widget('xupload.XUpload', array(
-            'url' => Yii::app()->createUrl("/article/upload"),
-            'model' => $photos,
-            'htmlOptions' => array('id'=>'xupluad_iwt'),
-            'attribute' => 'file',
-            'multiple' => true,          
-        	'options' => array(
-	            'maxFileSize' => 1024*1024*10,
-	            ),		            
-             //'formView' => 'application.views.article.viewUpload',
-           )    
-        ); ?>
-        
-
-      
-    </div>
-        
- 
+<legend>Add Images</legend>  
+<div id="upload_container">  
+    <?php $this->widget('xupload.XUpload', array(
+        'url' => Yii::app()->createUrl("/project/upload"),
+        'model' => $photos,
+        'htmlOptions' => array('id'=>'xupluad_form'),
+        'attribute' => 'file',
+        'multiple' => true,          
+    	'options' => array(
+            'maxFileSize' => 1024*1024*10,
+            ),		            
+         //'formView' => 'application.views.article.viewUpload',
+       )    
+    ); ?>
+</div>
+       
 <div class="form-actions">
     <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType'=>'submit', 'type'=>'primary', 'label'=>'Save')); ?>
     

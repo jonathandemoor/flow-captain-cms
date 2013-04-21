@@ -1,3 +1,2 @@
-<div id="content">
-	<div id="logo"></div>
-</div>
+<a id="content" href="mailto:info@flowcaptain.com">
+</a>

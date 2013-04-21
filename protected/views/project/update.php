@@ -10,6 +10,8 @@
 </div>
 <?php $this->renderPartial('_form', array(
 										'model' => $model,
-									)) ?>
+										'photos' => $photos
+									 )) ?>
+									 
 <?php $this->renderPartial('../_partials/additional_info', array('model' => $model)) ?>
 

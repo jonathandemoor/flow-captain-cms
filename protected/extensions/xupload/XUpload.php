@@ -24,7 +24,7 @@ class XUpload extends CJuiInputWidget {
      * set to true to use multiple file upload
      * @var boolean
      */
-    public $multiple = false;
+    public $multiple = true;
 
     /**
      * The upload template id to display files available for upload
@@ -111,14 +111,31 @@ class XUpload extends CJuiInputWidget {
 
         $this->options['url'] = $this->url;
         $this->options['autoUpload'] = $this -> autoUpload;
+        $this->options['acceptFileTypes'] = new CJavaScriptExpression('/(\.|\/)(gif|jpe?g|png)$/i');
 
         if (!$this->multiple) {
             $this->options['maxNumberOfFiles'] = 1;
         }
 
         $options = CJavaScript::encode($this -> options);
+        
+        $options_existing_images = new CJavaScriptExpression("$.ajax({
+            url: '/jonah/project/reloadImages',
+            dataType: 'json',
+            context: $('#xupluad_form')[0]
+        }).done(function (result) {
+            $(this).fileupload('option', 'done')
+                .call(this, null, {result: result});
+        });");  
+        
+        $options_existing_images_javascript = CJavaScript::encode($options_existing_images);
+        
 
         Yii::app() -> clientScript -> registerScript(__CLASS__ . '#' . $this -> htmlOptions['id'], "jQuery('#{$this->htmlOptions['id']}').fileupload({$options});", CClientScript::POS_READY);
+        
+         Yii::app()->clientScript->registerScript(__CLASS__, $options_existing_images_javascript, CClientScript::POS_READY);
+         
+         
         $htmlOptions = array();
         if ($this -> multiple) {
             $htmlOptions["multiple"] = true;

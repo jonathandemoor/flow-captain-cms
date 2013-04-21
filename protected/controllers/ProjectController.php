@@ -26,14 +26,12 @@ class ProjectController extends ApplicationController {
     public function actionAdd() {
     	
     	Yii::import("xupload.models.XUploadForm");
-		
-		// Remove layout	
-		$this->layout = 'upload';
 
-	    $photos = new XUploadForm;
-	    
-    
-    	$model = new Project();
+	    $photos = new XUploadForm;    
+    	$model  = new Project();
+    	$model->removeTmpFolder($this->user_main->fullname);
+    	
+    	Yii::app()->session['project_id'] = 'add';
     	    			
 		if (isset($_POST['Project'])) {
 			$model->attributes = $_POST['Project'];
@@ -41,7 +39,9 @@ class ProjectController extends ApplicationController {
 			$model['content_short'] = FCTools::generateShortContent($model->content);
 						
 			if($model->validate()) {
-				$model->save();
+				if($model->save()) {
+					$model->saveImages($this->user_main->fullname);
+				}
 				
 				$this->redirect(array('index'));
 			}			
@@ -56,7 +56,11 @@ class ProjectController extends ApplicationController {
     
      public function actionUpdate() {
 	    
-    	$model = $this->loadModel();
+	    Yii::import("xupload.models.XUploadForm");
+
+	    $photos = new XUploadForm;
+    	$model  = $this->loadModel();
+    	Yii::app()->session['project_id'] = $model->id;
     	    	    			
 		if (isset($_POST['Project'])) {
 			$model->attributes = $_POST['Project'];
@@ -70,7 +74,11 @@ class ProjectController extends ApplicationController {
 			}			
 		}	
 				
-		$this->render('update', array('model' => $model));
+		$this->render('update', 
+			array(
+				'model'  => $model,
+				'photos' => $photos
+			));
     } 
     
     public function actionDelete() {
@@ -91,27 +99,105 @@ class ProjectController extends ApplicationController {
         return $model;
     }
     
+    // Reload existing images
+	public function actionReloadImages() {
+	
+		Yii::import('xupload.models.XUploadForm');
+		
+		// Project id
+		$project = Yii::app()->session['project_id'];
+		
+		$path 		= '';
+		$publicPath = '';
+		
+		if($project == 'add') {
+			$path 	    = FCTools::getRealPath() . 'tmp/';
+			$publicPath = FCTools::getPublicPath() . 'tmp/';	
+	
+		} else {
+			$path 	    = FCTools::getRealPath() . 'final/' . $project . '/';
+			$publicPath = FCTools::getPublicPath() . 'final/' . $project . '/';	
+		}
+
+		// get all file names
+		$files = glob($path . 'thumbs/*'); 		
+		
+		$jsonOutput = array();
+		$userImages = array();
+
+		// Loop over all files
+		foreach($files as $i => $file) {  		   
+		   
+		   $imageInfo = array(
+		        'name' 				=> basename($file),
+		        'type' 				=> 'jpg',
+		        'size' 				=> intval(FCTools::getFileSize($path . '/images/' . basename($file))),
+		        'url' 				=> $publicPath . 'images/' . basename($file),
+		        'thumbnail_url' 	=> $publicPath . 'thumbs/' . basename($file),
+		        'delete_url' 		=> $this->createUrl('upload', array(
+		            									'_method' => 'delete',
+		            									'file' => basename($file)
+		            									)),
+		        'delete_type' 		=> 'DELETE'
+		    );
+		    
+		    $userImage = array(
+                'path' 		=> $publicPath . 'images/' . basename($file),
+                'thumb' 	=> $publicPath . 'thumbs/' . basename($file),
+                'filename' 	=> basename($file),
+                'size' 		=> intval(FCTools::getFileSize($path . '/images/' . basename($file))),
+                'mime' 		=> 'image/jpeg',
+            );
+
+		    // push to array
+		    array_push($jsonOutput, $imageInfo);
+		    array_push($userImages, $userImage);  
+		}
+		
+		Yii::app()->session['xupload_images'] = $userImages;
+		
+		echo json_encode($jsonOutput);		
+	}
+    
     // Upload images
 	public function actionUpload() {
 		
 		Yii::import("xupload.models.XUploadForm");
+	 	
+	 	// Project id
+		$project = Yii::app()->session['project_id'];
 		
-	 	$path 	    = FCTools::getRealPath() . 'tmp/';
-	 	$publicPath = FCTools::getPublicPath() . 'tmp/';	
+		$path 		= '';
+		$publicPath = '';
+		
+		if($project == 'add') {
+			$path 	    = FCTools::getRealPath() . 'tmp/';
+			$publicPath = FCTools::getPublicPath() . 'tmp/';	
+	
+		} else {
+			$path 	    = FCTools::getRealPath() . 'final/' . $project . '/';
+			$publicPath = FCTools::getPublicPath() . 'final/' . $project . '/';	
+		}	
 	 	
-	 	FCTools::createDirectory($path . $this->user_main->fullname . '/');
 	 	
-	 	$path 		.= $this->user_main->fullname . '/';
-	 	$publicPath .= $this->user_main->fullname . '/';
-	 	
-	 	// Subfolder: images/thumbs
-	 	FCTools::createDirectory($path . 'images/');
-	 	FCTools::createDirectory($path . 'thumbs/');	
+	 	if($project == 'add') {
+		 	if(file_exists($path . $this->user_main->fullname . '/')) {
+		 		FCTools::deleteDirTree($path . $this->user_main->fullname . '/');
+		 	}
+		 	
+		 	FCTools::createDirectory($path . $this->user_main->fullname . '/');
+		 	
+		 	$path 		.= $this->user_main->fullname . '/';
+		 	$publicPath .= $this->user_main->fullname . '/';
+		 	
+		 	// Subfolder: images/thumbs
+		 	FCTools::createDirectory($path . 'images/');
+		 	FCTools::createDirectory($path . 'thumbs/');
+		}	
     
 	    // This is for IE which doens't handle 'Content-type: application/json' correctly
 	    header('Vary: Accept');
-	    if( isset($_SERVER['HTTP_ACCEPT']) 
-	        && (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)) {
+	    if(isset($_SERVER['HTTP_ACCEPT']) && (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)) {
 	        header('Content-type: application/json');
 	    } else {
 	        header('Content-type: text/plain');
@@ -153,6 +239,23 @@ class ProjectController extends ApplicationController {
 	                $image->save($path . '/thumbs/' . $filename);
 	                chmod($path. '/thumbs/' . $filename, 0777);
 	                
+	                // Now we need to save this path to the user's session
+	                if(Yii::app()->session['xupload_images']) {
+	                    $userImages = Yii::app()->session['xupload_images'];
+	                } else {
+	                    $userImages = array();
+	                }
+	                
+	                 $userImages[] = array(
+	                    'path' 		=> $path . '/images/' . $filename,
+	                    'thumb' 	=> $path . '/thumbs/' . $filename,
+	                    'filename' 	=> $filename,
+	                    'size' 		=> $model->size,
+	                    'mime' 		=> $model->mime_type,
+	                    'name' 		=> $model->name,
+	                );
+	                
+	                Yii::app()->session['xupload_images'] = $userImages;
 	 	 
 	                // Now we need to tell our widget that the upload was succesfull
 	                // We do so, using the json structure defined in

@@ -120,7 +120,7 @@ class XUpload extends CJuiInputWidget {
         $options = CJavaScript::encode($this -> options);
         
         $options_existing_images = new CJavaScriptExpression("$.ajax({
-            url: '/jonah/project/reloadImages',
+            url: '". Yii::app()->request->baseUrl.'/project/reloadImages' ."',
             dataType: 'json',
             context: $('#xupluad_form')[0]
         }).done(function (result) {

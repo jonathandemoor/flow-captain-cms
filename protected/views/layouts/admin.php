@@ -7,6 +7,7 @@
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/admin.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colors.css" />
 </head>
@@ -16,15 +17,15 @@
 		$this->widget('bootstrap.widgets.TbNavbar', array(
 		    'type'		=> 'inverse', 
 		    'brand'		=> Yii::app()->params['cms_name'],
-		    'brandUrl'	=> array('admin/home'),
+		    'brandUrl'	=> array('admin/admin/home'),
 		    'collapse'	=> true,
 		    'items'=>array(
 		        array(
 		            'class' => 'bootstrap.widgets.TbMenu',
 		            'items' => array(
-		                array('label' => 'Content', 'icon' => 'th-list', 'url'=> array('contentblock/index'), 'active' => ($this->id == 'contentblock' ? true : false)),
-		                array('label' => 'News', 'icon' => 'fire', 'url' => array('news/index'), 'active' => ($this->id == 'news' ? true : false)),
-		                array('label' => 'Projects', 'icon' => 'briefcase', 'url' => array('project/index'), 'active' => ($this->id == 'project' ? true : false)),
+		                array('label' => 'Content', 'icon' => 'th-list', 'url'=> array('admin/contentBlock/index'), 'active' => ($this->id == 'contentblock' ? true : false)),
+		                array('label' => 'News', 'icon' => 'fire', 'url' => array('admin/news/index'), 'active' => ($this->id == 'news' ? true : false)),
+		                array('label' => 'Projects', 'icon' => 'briefcase', 'url' => array('admin/project/index'), 'active' => ($this->id == 'project' ? true : false)),
 		            ),
 		        ),
 		        array(
@@ -32,7 +33,7 @@
 		            'htmlOptions' => array('class' => 'pull-right'),
 		            'items' => array(
 		                array('label' => $this->user_main->fullname, 'icon' => 'user', 'items'=>array(
-		                    array('label' => 'Profile', 'url' => array('admin/profile')),
+		                    array('label' => 'Profile', 'url' => array('admin/admin/profile')),
 		                    array('label' => 'Log Out', 'url' => array('/logout')),
 		                ), 'active' => true),
 		            ),
@@ -41,10 +42,10 @@
 		            'class' => 'bootstrap.widgets.TbMenu',
 		            'htmlOptions' => array('class'=>'pull-right'),
 		            'items'=>array(
-		                array('label' => Manage, 'items' =>array(
-		                    array('label' => 'Users', 'url' => array('user/index')),
-		                    array('label' => 'Roles', 'url' => array('role/index')),
-		                    array('label' => 'Pages', 'url' => array('page/index')),
+		                array('label' => 'Manage', 'items' =>array(
+		                    array('label' => 'Users', 'url' => array('admin/user/index')),
+		                    array('label' => 'Roles', 'url' => array('admin/role/index')),
+		                    array('label' => 'Pages', 'url' => array('admin/page/index')),
 		                ), 'active' => ($this->id == 'user' || $this->id == 'page' || $this->id == 'role' ? true : false)),
 		            ),
 		        ),

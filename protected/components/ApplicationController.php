@@ -4,14 +4,11 @@ class ApplicationController extends CController
 {
 	public $layout			= 'main';
 	public $user_main       = null;
-	public $adminActions  	= array();
 	
 	// Enable access controler
 	public function filters() {
-        return array(
-            'accessControl',
-        );
-    }
+		return array('accessControl');
+	}
 	
 	public function beforeAction($action) {
 
@@ -27,40 +24,53 @@ class ApplicationController extends CController
     }
     
     public function accessRules() {
-        $rules = array(
+        // Get the user
+        try {
+            $this->user_main = User::model()->findActiveByEmail(Yii::app()->user->name);
+        } catch (Exception $e) {
+            $this->user_main = false;
+        }
+        
+        // Authorized users can see everything
+        if (Yii::app()->user->isGuest === false && $this->user_main) {
+            return array(
+                array(
+                    'allow',
+                    'users' => array('@'),
+                ),
+            );
+        }
+
+        // Return the default properties
+        return array(
             array(
                 'allow',
-                'actions' => array('login'),
-                'users' => array('*'),
+                'controllers' => array('site'),
+                'users'       => array('*'),
             ),
             array(
-                'allow',
+                'deny',
                 'users' => array('*'),
             ),
         );
-        
-        if (sizeof($this->adminActions) > 0) {
-            array_unshift(
-                $rules,
-                array(
-                    'deny',
-                    'actions' => $this->adminActions,
-                    'expression' => 'Yii::app()->user->isGuest',
-                )
-            );
-        }
-        return $rules;
+
     }
     
     public function render($template, $variables=array()) {
-		
-		if (in_array($this->action->id, $this->adminActions) || $this->action->id == 'login') {
+		/* if($this->id == 'files') {
+			$this->layout = 'files';
+		} elseif (in_array($this->action->id, $this->adminActions) || $this->action->id == 'login') {
             $this->layout = 'admin';
-        } else if($this->action->id == 'index') {
+        } else {
 			$this->layout = 'main';
-		} 
-		else {
-			$this->layout = 'main';
+		}*/
+		
+		if($this->id == 'files') {
+			$this->layout = 'files';
+		} elseif ($this->id == 'site' && $this->action->id != 'login') {
+            $this->layout = 'main';
+        } else {
+			$this->layout = 'admin';
 		}
 		
 		return parent::render($template, $variables); 

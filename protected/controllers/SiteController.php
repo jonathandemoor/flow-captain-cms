@@ -20,7 +20,7 @@ class SiteController extends ApplicationController
 	public function actionLogin() {
 
 		if (Yii::app()->user->isGuest === false) {
-			$this->redirect('admin/home');
+			$this->redirect('admin/admin/home');
 		}
 
 		$model = new LoginForm();
@@ -28,7 +28,7 @@ class SiteController extends ApplicationController
 			$model->attributes = $_POST['LoginForm'];
 			
 			if ($model->validate() && $model->login()) {
-				$this->redirect(array('admin/home'));
+				$this->redirect(array('admin/admin/home'));
 			}
 		}
 

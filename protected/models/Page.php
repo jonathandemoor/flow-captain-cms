@@ -1,16 +1,19 @@
 <?php
 
-class Page extends ApplicationModel {
-        
-    public static function model($className=__CLASS__) {
+class Page extends ApplicationModel 
+{
+    public static function model($className=__CLASS__) 
+    {
         return parent::model($className);
     }
     
-    public function tableName() {
+    public function tableName() 
+    {
         return 'tbl_pages';
     }
     
-    public function rules() {
+    public function rules() 
+    {
         return array(
             array(
                 'name',
@@ -19,26 +22,31 @@ class Page extends ApplicationModel {
         );
     }
     
-    public function attributeLabels() {
+    public function attributeLabels() 
+    {
         return array(
             'name' => 'Name',
         );
     }
     
-    public function findByID($id) {
+    public function findByID($id) 
+    {
         return $this->find(
             'id = :id',
             array('id' => $id)
         );
     }
     
-    public function findAllForFilter() {
+    public function findAllForFilter() 
+    {
 	    $pages = $this->findAll();
 	    
 	    $result = array();
 	    
 	    // Loop over pages
-	    foreach($pages as $page) {
+
+	    foreach ($pages as $page) 
+	    {
 		    $item = array();
 		    $item['label'] = $page->name;
 		    $item['url']   = array('contentBlock/index/filter/' . $page->id);
@@ -47,9 +55,11 @@ class Page extends ApplicationModel {
 	    }
 	    
 	    // Add separator
+
 	    $result[] = '---';
 		
 		// Add Reset btn    
+
 		$item = array();
 	    $item['label']  = 'All Pages';
 	    $item['url']    = array('contentBlock/index');
@@ -60,19 +70,23 @@ class Page extends ApplicationModel {
 	    return $result;
     } 
     
-    public function findAllForList() {
+    public function findAllForList() 
+    {
 	    $pages = $this->findAll();
 	    
 	    $result = array();
 	    
-	    // Title    
+	    // Title 
+
 		$item = array();
 	    $item['label'] = 'Pages';
 	    
 	    $result[] = $item;
 	    
 	    // Loop over pages
-	    foreach($pages as $page) {
+
+	    foreach($pages as $page) 
+	    {
 		    $item = array();
 		    $item['label'] = $page->name;
 		    $item['url']   = array('contentBlock/index/filter/' . $page->id);
@@ -84,7 +98,8 @@ class Page extends ApplicationModel {
 	    return $result;
     } 
     
-    public function findAllForSelect() {
+    public function findAllForSelect() 
+    {
     	$pages = $this->findAll();
 	    
 	    $result = array();
@@ -92,7 +107,9 @@ class Page extends ApplicationModel {
 	    $result[''] = '-- Select Page --';
 	    
 	    // Loop over pages
-	    foreach($pages as $page) {			    
+
+	    foreach ($pages as $page) 
+	    {			    
 		    $result[$page->id] = $page->name;
 	    }
 	    

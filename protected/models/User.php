@@ -1,19 +1,22 @@
 <?php
 
-class User extends ApplicationModel {
-	
+class User extends ApplicationModel 
+{
 	public $password_new;
 	public $password_repeat;
     
-    public static function model($className=__CLASS__) {
+    public static function model($className=__CLASS__) 
+    {
         return parent::model($className);
     }
     
-    public function tableName() {
+    public function tableName() 
+    {
         return 'tbl_users';
     }
     
-    public function rules() {
+    public function rules() 
+    {
         return array(
             array(
                 'password',
@@ -57,7 +60,8 @@ class User extends ApplicationModel {
         );
     }
     
-    public function attributeLabels() {
+    public function attributeLabels() 
+    {
         return array(
             'fullname'  		=> 'Full Name',
             'password'  		=> 'Password',
@@ -69,22 +73,28 @@ class User extends ApplicationModel {
         );
     }
     
-    public function relations() {
+    public function relations() 
+    {
         return array(
             'role' => array(self::BELONGS_TO, 'Role', 'role_id'),
         );
     }
     
     // Before we save a user
-    protected function beforeSave() {    
 
+    protected function beforeSave() 
+    {    
     	$password_save = '';
     		
-        if ($this->isNewRecord) {
+        if ($this->isNewRecord) 
+        {
             $password_save  = $this->password;
             $this->password = sha1($password_save);
-        } else {
-            if (!empty($this->password_new)) {
+        } 
+        else 
+        {
+            if (!empty($this->password_new)) 
+            {
                 $password_save  = $this->password_new;
                 $this->password = sha1($password_save);
             }
@@ -93,7 +103,8 @@ class User extends ApplicationModel {
         return true;
     }
 
-    public function findActiveByEmail($email) {
+    public function findActiveByEmail($email) 
+    {
         return $this->findByAttributes(
             array(
                 'email'     => $email,
@@ -102,11 +113,11 @@ class User extends ApplicationModel {
         );
     }
     
-    public function findByID($id) {
+    public function findByID($id) 
+    {
         return $this->find(
             'id = :id',
             array('id' => $id)
         );
     }
-    
 }

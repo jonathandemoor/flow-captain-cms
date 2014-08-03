@@ -4,14 +4,20 @@ class UserIdentity extends CUserIdentity
 {
 	private $id;
     
-    public function authenticate() {
+    public function authenticate() 
+    {
         $record = User::model()->findActiveByEmail($this->name);
         
-        if ($record === null) {
+        if ($record === null) 
+        {
             $this->errorCode = self::ERROR_USERNAME_INVALID;
-        } elseif ($record->password !== sha1($this->password)) {
+        } 
+        elseif ($record->password !== sha1($this->password)) 
+        {
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
-        } else {
+        } 
+        else 
+        {
             $this->id    	    = $record->id;
             $this->username			= $record->email;
             $this->errorCode	= self::ERROR_NONE;
@@ -20,7 +26,8 @@ class UserIdentity extends CUserIdentity
         return !$this->errorCode;        
     }
     
-    public function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 }

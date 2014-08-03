@@ -4,11 +4,12 @@ class ContentBlockController extends ApplicationController {
     
     public $defaultAction = 'index';
     
-    public function actionIndex() {
-    	
+    public function actionIndex() 
+    {    	
 		$criteria = new CDbCriteria;
 		
-		if(isset($_GET['filter'])) {
+		if (isset($_GET['filter'])) 
+		{
 		    $criteria->condition = 'page_id = ' . $_GET['filter'];
 	    }
 		
@@ -27,21 +28,23 @@ class ContentBlockController extends ApplicationController {
 								));
     }
     
-    public function actionView() {
-				
+    public function actionView() 
+    {				
 		$this->render('view', array('model' => $this->loadModel()));
     }
     
-    public function actionAdd() {
-    
+    public function actionAdd() 
+    {    
     	$model = new ContentBlock();
     	    			
-		if (isset($_POST['ContentBlock'])) {
+		if (isset($_POST['ContentBlock'])) 
+		{
 			$model->attributes = $_POST['ContentBlock'];
 			
 			$model['content_short'] = FCTools::generateShortContent($model->content);
 						
-			if($model->validate()) {
+			if ($model->validate()) 
+			{
 				$model->save();
 				
 				$this->redirect(array('index'));
@@ -54,16 +57,18 @@ class ContentBlockController extends ApplicationController {
 							 ));
     } 
     
-     public function actionUpdate() {
-	    
+     public function actionUpdate() 
+     {   
     	$model = $this->loadModel();
     	    	    			
-		if (isset($_POST['ContentBlock'])) {
+		if (isset($_POST['ContentBlock'])) 
+		{
 			$model->attributes = $_POST['ContentBlock'];
 			
 			$model['content_short'] = FCTools::generateShortContent($model->content);
 									
-			if($model->validate()) {
+			if ($model->validate()) 
+			{
 				$model->save();
 				
 				$this->redirect(array('index'));
@@ -76,21 +81,27 @@ class ContentBlockController extends ApplicationController {
 							 ));
     } 
     
-    public function actionDelete() {
-	    
+    public function actionDelete() 
+    {	    
     	$model = $this->loadModel();
     	
     	$model->delete();	
     } 
     
-    protected function loadModel() {
-        if (!isset($_GET['id'])) {
+    protected function loadModel() 
+    {
+        if (!isset($_GET['id'])) 
+        {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+
         $model = ContentBlock::model()->findByPk($_GET['id']);
-        if (!$model) {
+
+        if (!$model) 
+        {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+        
         return $model;
     }
 }

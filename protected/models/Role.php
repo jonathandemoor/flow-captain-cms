@@ -1,16 +1,19 @@
 <?php
 
-class Role extends ApplicationModel {
-
-    public static function model($className=__CLASS__) {
+class Role extends ApplicationModel 
+{
+    public static function model($className=__CLASS__) 
+    {
         return parent::model($className);
     }
 
-    public function tableName() {
+    public function tableName() 
+    {
         return 'tbl_roles';
     }
 
-    public function rules() {
+    public function rules() 
+    {
         return array(
         	array(
                 'name',
@@ -19,20 +22,23 @@ class Role extends ApplicationModel {
         );
     }
 
-    public function attributeLabels() {
+    public function attributeLabels() 
+    {
         return array(
         	'id'   => '#',
         	'name' => 'Name',
         );
     }
 
-    public function relations() {
+    public function relations() 
+    {
         return array(
             'users' => array(self::HAS_MANY, 'User', 'role_id'),
         );
     }
 
-    public function findAllForSelect() {
+    public function findAllForSelect() 
+    {
 	    $roles = $this->findAll();
 	    
 	    $result = array();
@@ -40,12 +46,12 @@ class Role extends ApplicationModel {
 	    $result[''] = '-- Select Role --';
 	    
 	    // Loop over pages
-	    foreach($roles as $role) {
+
+	    foreach ($roles as $role) 
+        {
 		    $result[$role->id] = $role->name;
 	    }
 	    	    	    
 	    return $result;
-    } 
-
-
+    }
 }

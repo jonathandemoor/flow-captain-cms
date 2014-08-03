@@ -1,16 +1,19 @@
 <?php
 
-class News extends ApplicationModel {
-            
-    public static function model($className=__CLASS__) {
+class News extends ApplicationModel 
+{
+    public static function model($className=__CLASS__) 
+    {
         return parent::model($className);
     }
     
-    public function tableName() {
+    public function tableName() 
+    {
         return 'tbl_news';
     }
     
-    public function rules() {
+    public function rules() 
+    {
         return array(
             array(
                 'title, content',
@@ -23,7 +26,8 @@ class News extends ApplicationModel {
         );
     }
     
-    public function attributeLabels() {
+    public function attributeLabels() 
+    {
         return array(
             'content' 		 => 'Content',
             'title' 		 => 'Title',
@@ -32,10 +36,8 @@ class News extends ApplicationModel {
         );
     }
     
-    public function findByID($id) {
-        return $this->find(
-            'id = :id',
-            array('id' => $id)
-        );
+    public function findByID($id) 
+    {
+        return $this->find('id = :id', array('id' => $id));
     }
 }

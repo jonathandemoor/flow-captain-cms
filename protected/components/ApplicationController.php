@@ -6,33 +6,46 @@ class ApplicationController extends CController
 	public $user_main       = null;
 	
 	// Enable access controler
-	public function filters() {
+    
+	public function filters() 
+    {
 		return array('accessControl');
 	}
 	
-	public function beforeAction($action) {
-
+	public function beforeAction($action) 
+    {
     	// Get the current user details
-        try {
+
+        try 
+        {
             $this->user_main = User::model()->findActiveByEmail(Yii::app()->user->name);
             
-        } catch (Exception $e) {
+        } 
+        catch (Exception $e) 
+        {
             $this->user_main = false;
         }
                 
         return true;
     }
     
-    public function accessRules() {
+    public function accessRules() 
+    {
         // Get the user
-        try {
+
+        try 
+        {
             $this->user_main = User::model()->findActiveByEmail(Yii::app()->user->name);
-        } catch (Exception $e) {
+        } 
+        catch (Exception $e) 
+        {
             $this->user_main = false;
         }
         
         // Authorized users can see everything
-        if (Yii::app()->user->isGuest === false && $this->user_main) {
+
+        if (Yii::app()->user->isGuest === false && $this->user_main) 
+        {
             return array(
                 array(
                     'allow',
@@ -42,6 +55,7 @@ class ApplicationController extends CController
         }
 
         // Return the default properties
+        
         return array(
             array(
                 'allow',
@@ -56,20 +70,18 @@ class ApplicationController extends CController
 
     }
     
-    public function render($template, $variables=array()) {
-		/* if($this->id == 'files') {
+    public function render($template, $variables=array()) 
+    {	
+		if ($this->id == 'files') 
+        {
 			$this->layout = 'files';
-		} elseif (in_array($this->action->id, $this->adminActions) || $this->action->id == 'login') {
-            $this->layout = 'admin';
-        } else {
-			$this->layout = 'main';
-		}*/
-		
-		if($this->id == 'files') {
-			$this->layout = 'files';
-		} elseif ($this->id == 'site' && $this->action->id != 'login') {
+		} 
+        elseif ($this->id == 'site' && $this->action->id != 'login') 
+        {
             $this->layout = 'main';
-        } else {
+        } 
+        else 
+        {
 			$this->layout = 'admin';
 		}
 		

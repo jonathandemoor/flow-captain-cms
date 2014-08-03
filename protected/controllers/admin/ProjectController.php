@@ -4,8 +4,8 @@ class ProjectController extends ApplicationController {
     
     public $defaultAction = 'index';
     
-    public function actionIndex() {
-		
+    public function actionIndex() 
+    {
    		$items = new CActiveDataProvider(
 			'Project', array(
 			    'pagination' => array(
@@ -17,13 +17,13 @@ class ProjectController extends ApplicationController {
 		$this->render('index', array('items' => $items));
     }
     
-    public function actionView() {
-				
+    public function actionView() 
+    {		
 		$this->render('view', array('model' => $this->loadModel()));
     }
     
-    public function actionAdd() {
-    	
+    public function actionAdd() 
+    {
     	Yii::import("xupload.models.XUploadForm");
 
 	    $photos = new XUploadForm;    
@@ -31,19 +31,24 @@ class ProjectController extends ApplicationController {
     	
     	Yii::app()->session['project_id'] = 'add';
     	    			
-		if (isset($_POST['Project'])) {
+		if (isset($_POST['Project'])) 
+		{
 			$model->attributes = $_POST['Project'];
 			
 			$model['content_short'] = FCTools::generateShortContent($model->content);
 						
-			if($model->validate()) {
-				if($model->save()) {
+			if ($model->validate()) 
+			{
+				if ($model->save()) 
+				{
 					$model->saveImages($this->user_main->fullname);
 				}
 				
 				$this->redirect(array('index'));
 			}			
-		} else {
+		} 
+		else 
+		{
 			$model->removeTmpFolder($this->user_main->fullname);
 		}
 						
@@ -54,20 +59,22 @@ class ProjectController extends ApplicationController {
 			));
     } 
     
-     public function actionUpdate() {
-	    
+     public function actionUpdate() 
+     {
 	    Yii::import("xupload.models.XUploadForm");
 
 	    $photos = new XUploadForm;
     	$model  = $this->loadModel();
     	Yii::app()->session['project_id'] = $model->id;
     	    	    			
-		if (isset($_POST['Project'])) {
+		if (isset($_POST['Project'])) 
+		{
 			$model->attributes = $_POST['Project'];
 			
 			$model['content_short'] = FCTools::generateShortContent($model->content);
 									
-			if($model->validate()) {
+			if ($model->validate()) 
+			{
 				$model->save();
 				
 				$this->redirect(array('index'));
@@ -81,53 +88,66 @@ class ProjectController extends ApplicationController {
 			));
     } 
     
-    public function actionDelete() {
-	    
+    public function actionDelete() 
+    {
     	$model = $this->loadModel();
     	
     	$model->delete();	
     } 
     
-    protected function loadModel() {
-        if (!isset($_GET['id'])) {
+    protected function loadModel() 
+    {
+        if (!isset($_GET['id'])) 
+        {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+
         $model = Project::model()->findByPk($_GET['id']);
-        if (!$model) {
+
+        if (!$model) 
+        {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
+
         return $model;
     }
     
     // Reload existing images
-	public function actionReloadImages() {
-	
+
+	public function actionReloadImages() 
+	{	
 		Yii::import('xupload.models.XUploadForm');
 		
 		// Project id
+
 		$project = Yii::app()->session['project_id'];
 		
 		$path 		= '';
 		$publicPath = '';
 		
-		if($project == 'add') {
+		if ($project == 'add') 
+		{
 			$path 	    = FCTools::getRealPath() . 'tmp/';
 			$publicPath = FCTools::getPublicPath() . 'tmp/';	
 	
-		} else {
+		} 
+		else 
+		{
 			$path 	    = FCTools::getRealPath() . 'final/' . $project . '/';
 			$publicPath = FCTools::getPublicPath() . 'final/' . $project . '/';	
 		}
 
 		// get all file names
+
 		$files = glob($path . 'thumbs/*'); 		
 		
 		$jsonOutput = array();
 		$userImages = array();
 
 		// Loop over all files
-		foreach($files as $i => $file) {  		   
-		   
+
+		foreach($files as $i => $file) 
+		{		   
 		   $imageInfo = array(
 		        'name' 				=> basename($file),
 		        'type' 				=> 'jpg',
@@ -150,6 +170,7 @@ class ProjectController extends ApplicationController {
             );
 
 		    // push to array
+
 		    array_push($jsonOutput, $imageInfo);
 		    array_push($userImages, $userImage);  
 		}
@@ -160,8 +181,9 @@ class ProjectController extends ApplicationController {
 	}
     
     // Upload images
-	public function actionUpload() {
-		
+
+	public function actionUpload() 
+	{
 		Yii::import("xupload.models.XUploadForm");
 	 	
 	 	// Project id
@@ -170,19 +192,23 @@ class ProjectController extends ApplicationController {
 		$path 		= '';
 		$publicPath = '';
 		
-		if($project == 'add') {
+		if ($project == 'add') 
+		{
 			$path 	    = FCTools::getRealPath() . 'tmp/';
 			$publicPath = FCTools::getPublicPath() . 'tmp/';	
 	
-		} else {
+		} 
+		else 
+		{
 			$path 	    = FCTools::getRealPath() . 'final/' . $project . '/';
 			$publicPath = FCTools::getPublicPath() . 'final/' . $project . '/';	
 		}	
 	 	
 	 	
-	 	if($project == 'add') {
-	 	
-		 	if(file_exists($path . $this->user_main->fullname . '/')) {
+	 	if ($project == 'add') 
+	 	{	 	
+		 	if (file_exists($path . $this->user_main->fullname . '/')) 
+		 	{
 		 		FCTools::deleteDirTree($path . $this->user_main->fullname . '/');
 		 	}
 		 	
@@ -197,29 +223,42 @@ class ProjectController extends ApplicationController {
 		}	
     
 	    // This is for IE which doens't handle 'Content-type: application/json' correctly
+
 	    header('Vary: Accept');
-	    if(isset($_SERVER['HTTP_ACCEPT']) && (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)) {
+
+	    if (isset($_SERVER['HTTP_ACCEPT']) && (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)) 
+	    {
 	        header('Content-type: application/json');
-	    } else {
+	    } 
+	    else 
+	    {
 	        header('Content-type: text/plain');
 	    }	    
 	 
 	    // Here we check if we are deleting and uploaded file
-	    if(isset($_GET['_method'])) {
-	        if($_GET['_method'] == 'delete') {
-	            if($_GET['file'][0] !== '.') {
-	            	// Delete function
+
+	    if (isset($_GET['_method'])) 
+	    {
+	        if ($_GET['_method'] == 'delete') 
+	        {
+	            if ($_GET['file'][0] !== '.') 
+	            {
 	            	$this->actionDeleteImage($_GET['file']);         
 	            }
+
 	            echo json_encode(true);
 	        }
-	    } else {
+	    } 
+	    else 
+	    {
 	        $model = new XUploadForm;
 
 	        $model->file = CUploadedFile::getInstance($model, 'file');        
 	        
 	        // Check that the file was successfully uploaded
-	        if( $model->file !== null ) {
+
+	        if ($model->file !== null) 
+	        {
 	            // Grab some data
 	            $model->mime_type = $model->file->getType( );
 	            $model->size 	  = $model->file->getSize();
@@ -228,22 +267,29 @@ class ProjectController extends ApplicationController {
 	            //  Generate a random file name
 	            $filename  = time() . '_' . substr($model->name, 0,strrpos($model->name,'.'));
 	            $filename .= '.' . $model->file->getExtensionName();
-	            if($model->validate()) {
-	            	
+
+	            if ($model->validate()) 
+	            {	            	
 	                // Move image to the temporary dir
+
 	                $model->file->saveAs($path . '/images/' . $filename);
 	                chmod($path . '/images/' . $filename, 0777);	                
 	                
 	                // Move thumb to the temporary dir
+
 	                $image = Yii::app()->image->load($path . '/images/' . $filename);
 	                $image->resize(100, 100)->quality(75);
 	                $image->save($path . '/thumbs/' . $filename);
 	                chmod($path. '/thumbs/' . $filename, 0777);
 	                
 	                // Now we need to save this path to the user's session
-	                if(Yii::app()->session['xupload_images']) {
+
+	                if (Yii::app()->session['xupload_images']) 
+	                {
 	                    $userImages = Yii::app()->session['xupload_images'];
-	                } else {
+	                }
+	                else 
+	                {
 	                    $userImages = array();
 	                }
 	                
@@ -260,6 +306,7 @@ class ProjectController extends ApplicationController {
 	 	 
 	                // Now we need to tell our widget that the upload was succesfull
 	                // We do so, using the json structure defined in
+
 	                echo json_encode( array( array(
 	                        'name' 				=> $model->name,
 	                        'type' 				=> $model->mime_type,
@@ -272,17 +319,22 @@ class ProjectController extends ApplicationController {
 	                            									)),
 	                        'delete_type' 		=> 'POST'
 	                    )));
-	            } else {
-	            
+	            } 
+	            else 
+	            {
 	                // If the upload failed for some reason we log some data and let the widget know
+
 	                echo json_encode( array( 
 	                    array('error' => $model->getErrors('file'),
 	                )));
+	                
 	                Yii::log('XUploadAction: '.CVarDumper::dumpAsString( $model->getErrors()),
 	                    CLogger::LEVEL_ERROR, 'xupload.actions.XUploadAction' 
 	                );
 	            }
-	        } else {
+	        } 
+	        else 
+	        {
 	            throw new CHttpException( 500, 'Could not upload file' );
 	        }
 	    }

@@ -2,21 +2,23 @@
 
 class AdminController extends ApplicationController {
         
-    public function actionHome() {		
+    public function actionHome() 
+    {		
 		$this->render('home');
     }
     
-    public function actionProfile() {
-    	
+    public function actionProfile() 
+    {    	
 	    $model = $this->user_main;
     	$model->scenario = 'update';
     	    			
-		if (isset($_POST['User'])) {
-			
+		if (isset($_POST['User'])) 
+		{			
 			$model->attributes = $_POST['User'];
 			$model->password_repeat = $_POST['User']['password_repeat'];	
 			
-			if($model->validate()) {
+			if ($model->validate()) 
+			{
 				$model->save();
 				
 				$this->redirect(array('home'));

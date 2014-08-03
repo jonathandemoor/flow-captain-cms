@@ -1,16 +1,19 @@
 <?php
 
-class ContentBlock extends ApplicationModel {
-        
-    public static function model($className=__CLASS__) {
+class ContentBlock extends ApplicationModel 
+{
+    public static function model($className=__CLASS__) 
+    {
         return parent::model($className);
     }
     
-    public function tableName() {
+    public function tableName() 
+    {
         return 'tbl_content_blocks';
     }
     
-    public function rules() {
+    public function rules() 
+    {
         return array(
             array(
                 'name, content, page_id',
@@ -23,7 +26,8 @@ class ContentBlock extends ApplicationModel {
         );
     }
     
-    public function attributeLabels() {
+    public function attributeLabels() 
+    {
         return array(
             'name'           => 'Name',
             'content' 		 => 'Content',
@@ -41,14 +45,16 @@ class ContentBlock extends ApplicationModel {
         );
     }
     
-    public function findByID($id) {
+    public function findByID($id) 
+    {
         return $this->find(
             'id = :id',
             array('id' => $id)
         );
     }
     
-    public function findByName($name) {
+    public function findByName($name) 
+    {
         return $this->find(
             'name = :name',
             array('name' => $name)

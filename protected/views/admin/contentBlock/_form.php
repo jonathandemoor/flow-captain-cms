@@ -7,6 +7,7 @@
   	<?php echo $form->dropDownListRow($model, 'page_id', $pages); ?>
     <?php echo $form->textFieldRow($model, 'name', array('hint'=>'Hint: Reference name')); ?>
     <?php echo $form->textFieldRow($model, 'title', array('hint'=>'Hint: Head title of the page')); ?>
+    
     <div class="control-group">
     	<div class="controls">
 		    <?php $this->widget('ext.redactor.ERedactorWidget',array(
